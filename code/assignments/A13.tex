@@ -1,0 +1,120 @@
+\subsection{Q: Show Maxwell's Equations}
+
+Equation \ref{eq:Max_sta} and \ref{eq:Max_kin} are given, where $F$ is explained by \ref{eq:F} and \ref{eq:F-mat}. 
+\begin{equation}
+\mathrm{d} F=0  
+\label{eq:Max_sta}
+\end{equation} 
+
+
+\begin{equation}
+\mathrm{d} (\star F)=0
+\label{eq:Max_kin}
+\end{equation}
+
+\begin{equation}
+F=\frac{1}{2}\mathrm{d x}^{\mu} \wedge \mathrm{d x}^{\nu} F_{\mu\nu}
+\label{eq:F}
+\end{equation}
+
+
+\begin{equation}
+F_{\mu\nu} =  = \begin{bmatrix} 0 & E_x/c & E_y/c & E_z/c \\ -E_x/c & 0 & -B_z & B_y \\ -E_y/c & B_z & 0 & -B_x \\ -E_z/c & -B_y & B_x & 0 \end{bmatrix}
+\label{eq:F-mat}
+\end{equation}   
+
+
+
+
+
+
+Now we can develop equation \ref{eq:Max_sta} as follow by inserting the values from \ref{eq:F}. 
+
+\begin{gather*}
+\mathrm{d}F=\frac{\mathrm{d}}{2}(\mathrm{d}t \wedge \mathrm{d}x F_{12} + \mathrm{d}t \wedge \mathrm{d}y F_{13}+ \mathrm{d}t \wedge \mathrm{dz} F_{14}+ \\  \mathrm{d}x \wedge \mathrm{d}t F_{21}+\mathrm{d}x \wedge \mathrm{d}y F_{23}+ \mathrm{d}x \wedge \mathrm{dz} F_{24}+ \\\mathrm{d}y\wedge \mathrm{d}t F_{31}+\mathrm{d}y \wedge \mathrm{d}x F_{32}+ \mathrm{d}y \wedge \mathrm{d}z F_{34}+ \\
+\mathrm{d}z \wedge \mathrm{d}t F_{41}+\mathrm{d}z \wedge \mathrm{d}x F_{42}+ \mathrm{d}z \wedge \mathrm{d}y F_{43})\\
+=0
+\end{gather*}
+By inserting the values from the matrix \ref{eq:F-mat} with $c=1$, we find the following expression. 
+
+\begin{gather*}
+\mathrm{d}(\mathrm{d}t \wedge \mathrm{d}x(-E_x)+\mathrm{d}t \wedge \mathrm{d}y(-E_y)+\mathrm{d}t \wedge \mathrm{dz}(-E_z) + \\\mathrm{d}x \wedge \mathrm{d}y(B_z)+\mathrm{d}z \wedge \mathrm{d}x(B_y)+\mathrm{d}y \wedge \mathrm{dz}(B_x))\\
+=0
+\end{gather*}
+
+By taking the derivative of the expression we can rewrite it. 
+
+\begin{gather*}
+-(\frac{\partial E_x}{\partial y}) \mathrm{d}t \wedge \mathrm{d}x \wedge \mathrm{d}y+ (\frac{\partial E_x}{\partial z}) \mathrm{d}t \wedge \mathrm{d}z \wedge \mathrm{d}x\\ + (\frac{\partial E_y}{\partial x}) \mathrm{d}t \wedge \mathrm{d}x \wedge \mathrm{d}y- (\frac{\partial E_y}{\partial z}) \mathrm{d}t \wedge \mathrm{d}z \wedge \mathrm{d}x\\+
+(\frac{\partial E_z}{\partial x}) \mathrm{d}t \wedge \mathrm{d}x \wedge \mathrm{d}z
++ (\frac{\partial E_z}{\partial y}) \mathrm{d}t \wedge \mathrm{d}y \wedge \mathrm{d}z\\
++ (\frac{\partial B_x}{\partial x}) \mathrm{d}x \wedge \mathrm{d}y \wedge \mathrm{d}z
++ (\frac{\partial B_x}{\partial t}) \mathrm{d}t \wedge \mathrm{d}y \wedge \mathrm{d}z\\
++ (\frac{\partial B_y}{\partial y}) \mathrm{d}x \wedge \mathrm{d}y \wedge \mathrm{d}z
+- (\frac{\partial B_y}{\partial t}) \mathrm{d}t \wedge \mathrm{d}x \wedge \mathrm{d}z \\
++ (\frac{\partial B_z}{\partial z}) \mathrm{d}x \wedge \mathrm{d}y \wedge \mathrm{d}z
++(\frac{\partial B_z}{\partial t}) \mathrm{d}t \wedge \mathrm{d}x \wedge \mathrm{d}y \\
+=0
+\end{gather*}
+
+This can be writen as below by changing sign and order on some of the derivatives. 
+
+\begin{gather*}
+\mathrm{d}x \wedge \mathrm{d}y \wedge \mathrm{d}z \begin{bmatrix} \frac{\partial B_x}{\partial x}+\frac{\partial B_y}{\partial y}+\frac{\partial B_z}{\partial z} \end{bmatrix}  \\+
+\mathrm{d}t \wedge \mathrm{d}x \wedge \mathrm{d}y \begin{bmatrix} \frac{\partial E_y}{\partial x}-\frac{\partial E_x}{\partial y}+\frac{\partial B_z}{\partial t} \end{bmatrix} \\+
+\mathrm{d}t \wedge \mathrm{d}z \wedge \mathrm{d}x \begin{bmatrix}\frac{\partial E_x}{\partial z}-\frac{\partial E_z}{\partial x}+\frac{\partial B_y}{\partial t}
+\end{bmatrix} \\
++\mathrm{d}t \wedge \mathrm{d}y \wedge \mathrm{d}z \begin{bmatrix}\frac{\partial E_z}{\partial y}-\frac{\partial E_y}{\partial z}+\frac{\partial B_x}{\partial t}\end{bmatrix} \\=0
+\end{gather*}
+Since each of the coefficient must equal zero, we find equations \ref{eq:Max1} and \ref{eq:Max2} . 
+
+\begin{equation}
+\nabla \cdot \vec{B}=0
+\label{eq:Max1}
+\end{equation}
+
+\begin{equation}
+\nabla \times \vec{E}= - \frac{\partial \vec{B}}{\partial t}
+\label{eq:Max2}
+\end{equation}
+
+With the same approach for equation \ref{eq:Max_kin}, we start with deriving $\star F$. 
+
+\begin{gather*}
+\star F=\star(\mathrm{d}t \wedge \mathrm{d}x(-E_x)+\mathrm{d}t \wedge \mathrm{d}y(-E_y)+\mathrm{d}t \wedge \mathrm{dz}(-E_z) + \\\mathrm{d}x \wedge \mathrm{d}y(B_z)+\mathrm{d}z \wedge \mathrm{d}x(B_y)+\mathrm{d}y \wedge \mathrm{d}z(B_x))=\\\mathrm{d}y \wedge \mathrm{d}z(E_x)+\mathrm{d}z \wedge \mathrm{d}x(E_y)+\mathrm{d}x \wedge \mathrm{d}y(E_z) + \\\mathrm{d}t \wedge \mathrm{d}z(B_z)+\mathrm{d}t \wedge \mathrm{d}y(B_y)+\mathrm{d}t \wedge \mathrm{d}x(B_x)
+\end{gather*}
+
+This give us the following expression.
+\begin{gather*}
+\mathrm{d} (\star F)=\mathrm{d}( \mathrm{d}y \wedge \mathrm{d}z(E_x)+\mathrm{d}z \wedge \mathrm{d}x(E_y)+\mathrm{d}x \wedge \mathrm{d}y(E_z) + \\\mathrm{d}t \wedge \mathrm{d}z(B_z)+\mathrm{d}t \wedge \mathrm{d}y(B_y)+\mathrm{d}t \wedge \mathrm{d}x(B_x))=\\
+\frac{\partial E_x}{\partial x} \mathrm{d}x \wedge \mathrm{d}y \wedge \mathrm{d}z+
+\frac{\partial E_y}{\partial y} \mathrm{d}x \wedge \mathrm{d}y \wedge \mathrm{d}z+\\
+\frac{\partial E_z}{\partial z} \mathrm{d}x \wedge \mathrm{d}y \wedge \mathrm{d}z+
+\frac{\partial E_x}{\partial t} \mathrm{d}t \wedge \mathrm{d}y \wedge \mathrm{d}z+ \\
+\frac{\partial E_y}{\partial t} \mathrm{d}t \wedge \mathrm{d}z \wedge \mathrm{d}x+
+\frac{\partial E_z}{\partial t} \mathrm{d}t \wedge \mathrm{d}x \wedge \mathrm{d}y+ \\
+\frac{\partial B_x}{\partial y} \mathrm{d}y \wedge \mathrm{d}t \wedge \mathrm{d}x+ 
+\frac{\partial B_x}{\partial z} \mathrm{d}z \wedge \mathrm{d}t \wedge \mathrm{d}x+ \\
+\frac{\partial B_y}{\partial x} \mathrm{d}x \wedge \mathrm{d}t \wedge \mathrm{d}y+ 
+\frac{\partial B_y}{\partial z} \mathrm{d}z \wedge \mathrm{d}t \wedge \mathrm{d}y+ \\
+\frac{\partial B_z}{\partial x} \mathrm{d}x \wedge \mathrm{d}t \wedge \mathrm{d}z+ 
+\frac{\partial B_z}{\partial y} \mathrm{d}y \wedge \mathrm{d}t \wedge \mathrm{d}z=\\
+\mathrm{d}x \wedge \mathrm{d}y \wedge \mathrm{d}z \begin{bmatrix} \frac{\partial E_x}{\partial x}+ \frac{\partial E_y}{\partial y} + \frac{\partial E_z}{\partial z} \end{bmatrix} \\
++\mathrm{d}t \wedge \mathrm{d}x \wedge \mathrm{d}y \begin{bmatrix} \frac{\partial B_x}{\partial y}- \frac{\partial B_y}{\partial x} + \frac{\partial E_z}{\partial t} \end{bmatrix}\\
++\mathrm{d}t \wedge \mathrm{d}z \wedge \mathrm{d}x \begin{bmatrix} \frac{\partial B_x}{\partial z}- \frac{\partial B_z}{\partial x} + \frac{\partial E_y}{\partial t} \end{bmatrix}\\
++\mathrm{d}t \wedge \mathrm{d}y \wedge \mathrm{d}z \begin{bmatrix} \frac{\partial B_y}{\partial z}- \frac{\partial B_z}{\partial y} + \frac{\partial E_x}{\partial t} \end{bmatrix}\\
+=0
+ \end{gather*}
+ 
+ Since each of the coefficient must equal zero, we find equations \ref{eq:Max3} and \ref{eq:Max4} . 
+
+\begin{equation}
+\nabla \cdot \vec{E}=0
+\label{eq:Max3}
+\end{equation}
+
+\begin{equation}
+\nabla \times \vec{B}= \frac{\partial \vec{E}}{\partial t}
+\label{eq:Max4}
+\end{equation}
+ 

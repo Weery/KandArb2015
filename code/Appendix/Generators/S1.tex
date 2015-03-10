@@ -1,0 +1,276 @@
+\section{Finding the generators for the conformal transformation \label{sec:app1}}
+Conformal transformations are those transformations which satisfy equation \ref{eq:conf}
+
+\begin{equation}
+\Lambda\Lambda\eta = A(x)\eta,
+\label{eq:conf}
+\end{equation}
+in which 
+$$\Lambda\ein{\mu}{\nu} \equiv \pder{\tilde{x}^\mu}{x^\nu}\equiv
+\p_\nu \tilde{x}^\mu $$
+
+where $\eta$ is the usual Lorentzian metric. We now perform an infinitesimal transformation with parameter $\ep$
+
+\begin{equation}
+\tilde{x} ^\mu =x^\mu+\ep^\mu (x)+ \mathcal{O}(\ep^2)
+\label{eq:tilde1}
+\end{equation}
+
+in order to determine the generators of the conformal group. By using the definition of $\Lambda$ we can write \ref{eq:conf} as
+$$
+\p _\mu \tilde{x}^\rho \p_\nu \tilde{x}^\sigma 
+\eta_{\rho \sigma}
+=A(x) \eta_{\mu \nu}. 
+$$
+and this together with equation \ref{eq:tilde1} give us 
+$$
+A(x) \eta_{\mu \nu}=
+\eta_{\rho \sigma}
+\big(\delta^\rho _\mu 
++ \p_\mu \ep ^\rho
++\mathcal{O}(\ep^2)\big)
+\big(\delta^\sigma _\nu 
++ \p_\nu \ep ^\sigma
++\mathcal{O}(\ep^2)\big)=
+$$$$
+\eta_{\rho \sigma} 
+\big(\delta^\rho _\mu \delta^\sigma _\nu
++\delta^\rho _\mu \p_\nu \ep ^\sigma
++\delta^\sigma _\nu\p_\mu \ep ^\rho
++\mathcal{O}(\ep^2)\big)=
+$$$$
+\eta_{\mu \nu}
++\eta_{\mu \sigma}\p_\nu \ep ^\sigma
++\eta_{\rho \nu}\p_\mu \ep ^\rho
++\mathcal{O}(\ep^2)=
+$$$$
+\eta_{\mu \nu}
++\p_\nu \ep _\mu
++\p_\mu \ep _\nu
++\mathcal{O}(\ep^2)
+$$
+
+where the dependence of $\ep(x)$ has been suppressed. By transferring the expressions containing $\eta_{\mu \nu}$ to the same side, we gain the expression
+
+$$
+(A(x)-1)\eta_{\mu \nu}
+=
+\p_\nu \ep _\mu
++\p_\mu \ep _\nu
++\mathcal{O}(\ep^2).
+$$
+
+To simplify the expression we denote $(A(x)-1)$ as $B(x)$ and neglect the $\mathcal{O}(\ep^2)$ term for the rest of the calculation, this equation can be seen in \ref{eq:orgin}.
+\begin{equation}
+B(x)\eta_{\mu \nu}=
+\p_\nu \ep _\mu
++\p_\mu \ep _\nu
+\label{eq:orgin}
+\end{equation}
+We point out to the reader that $\eta^{\mu \nu} \eta_{\mu \nu}$ equals $d$ where $d$ is the dimension. 
+To continue the calculation, we multiply the expression with $\eta^{\mu \nu}$:
+
+$$
+B(x)\eta_{\mu \nu} \eta^{\mu \nu}=B(x)d= \eta^{\mu \nu}\p_\nu \ep _\mu+\eta^{\mu \nu}\p_\mu \ep _\nu=2 \p^\sigma \ep _\sigma
+$$
+where we've written $\eta^{\rho \nu}\p_\rho $ as $\p^\nu $ and introduced summation indices. Thus:
+\begin{equation}
+B(x)=\frac{2}{d} \p^\sigma \ep _\sigma.
+\label{eq:B(x)}
+\end{equation}
+We continue by we inserting this expression into equation \ref{eq:orgin}, 
+
+\begin{equation}
+B(x) \eta_{\mu \nu}= \frac{2}{d} \p^\sigma \ep _\sigma \eta_{\mu \nu}
+=\p_\nu \ep _\mu
++\p_\mu \ep _\nu.
+\label{eq:numu}
+\end{equation}
+
+By acting on this expression with $\p^\nu $ , we get
+
+$$
+\frac{ 2}{d}\eta^{\rho\nu}\p_\rho \p^\sigma \ep _\sigma \eta_{\mu \nu}
+=
+\frac{ 2}{d} \p_\mu \p^\sigma \ep_\sigma
+=
+\p^\nu \p_\nu \ep _\mu
++\p^\nu \p_\mu \ep _\nu.
+$$
+
+
+Derivation of this expression and exchange of summation indices now gives us
+$$
+\frac{2}{d} \p_\nu \p_\mu(\p^\sigma \ep_\sigma)
+=\p_\nu(\p^\sigma \p_\sigma\ep_\mu)
++\p_\nu \p_\mu(\p^\sigma \ep_\sigma).
+$$
+
+
+If the indeces $\mu$ and $\nu$ are switched and the result added to our original equation we find that
+
+$$
+\frac{2}{d}\p_\nu \p_\mu(\p^\sigma \ep_\sigma)+\frac{2}{d}\p_\mu \p_\nu(\p^\sigma \ep_\sigma)=
+$$$$
+\p_\nu(\p^\sigma \p_\sigma\ep_\mu )
++\p_\nu \p_\mu(\p^\sigma \ep_\sigma)
++\p_\mu(\p^\sigma \p_\sigma\ep_\nu )
++\p_\mu \p_\nu(\p^\sigma \ep_\sigma),
+$$
+
+which, as partial derivatives commute, equals
+
+$$
+\frac{4}{d}\p_\mu \p_\nu(\p^\sigma \ep_\sigma)
+=2\p_\mu \p_\nu(\p^\sigma \ep_\sigma)
++\p^\sigma \p_\sigma(\p_\nu \ep_\mu+\p_\mu \ep_\nu).
+$$
+By using equation \ref{eq:numu}, this can be expressed as
+
+$$
+\frac{4}{d}\p_\mu \p_\nu(\p^\sigma \ep_\sigma)
+=2\p_\mu \p_\nu(\p^\sigma \ep_\sigma)
++\p^\sigma \p_\sigma(\frac{2}{d} \p^\rho \ep _\rho \eta_{\rho \nu})$$
+, which can be simplified to
+
+$$
+2\p_\mu \p_\nu(\p^\sigma \ep_\sigma)=
+d\p_\mu \p_\nu(\p^\sigma \ep_\sigma)
++\p^\sigma \p_\sigma ( \p^\rho \ep _\rho \eta_{\rho \nu}).
+$$
+and by moving everything to the RHS we finally get
+$$
+\big(\eta_{\rho \nu}\p^\sigma \p_\sigma+(d-2)\p_\mu \p_\nu\big)\p^\sigma \ep_\sigma=
+ \big(2(d-1)\p_\nu \p_\rho\big)\p^\sigma \ep_\sigma=0.
+$$
+Thus $\ep$ must be able to be expressed as a polynomial of degree 2 or lower and can be written as
+\begin{equation}
+ \ep^\mu(x)=a^\mu +b\ein{\mu}{\nu} x^\nu+ c\ein{\mu}{\nu \rho} x^\nu x^\rho.
+ \label{eq:eps}
+ \end{equation}
+ 
+We now insert this expression into equation \ref{eq:numu}, our original constraint. First we find that
+  $$
+  \p_\nu \ep_\mu=\p_\nu b_{\mu \gamma}x^\gamma+\p_\nu c_{\mu \gamma \sigma} x^\gamma x^\sigma=b_{\mu \nu}+ c_{\mu \nu \sigma}x^\sigma+c_{\mu \gamma \nu}x^\gamma
+  $$
+ and
+$$ \p_\mu \ep^\mu= \p_\mu b\ein{\mu}{\nu}x^\nu +\p_\mu c\ein{\mu}{\nu \gamma}x^\gamma x^\mu= \\ b\ein{\mu}{\nu}+c\ein{\mu}{\mu \gamma} x^\gamma+c\ein{\mu}{\nu \mu} x^\nu.
+$$
+
+By demanding that our constraint is satisfied for each component independent of the others we first find that,
+by letting $b$ and $c$ be zero, there are no constrains on a. If instead $a$ and $c$ are zero we find that equation \ref{eq:numu} take the form
+
+\[
+\frac{2}{d}  b\ein {\sigma}{\sigma} \eta_{\mu \nu}=b_{\mu \nu}+b_{\nu \mu}.
+\]
+Splitting $b_{\mu\nu}$ into its symmetric and antisymmetric part as $\omega_{\mu \nu}$and $k_{\mu \nu}$, where $k_{\mu \nu}=k_{\nu \mu}$  and $\omega_{\mu \nu}=-\omega_{\nu \mu}$, the expression above can be rewritten as
+$$
+\frac{2}{d}  k\ein {\sigma}{\sigma} \eta_{\mu \nu}=2k_{\mu \nu}
+$$
+whence there are no constraints on $\omega_{\mu\nu}$. As $k\ein{\sigma}{\sigma}$ is a constant scalar we furthermore find that $k_{\mu\nu}=\alpha\eta_{\mu\nu}$.
+
+In order to find the constraint on $c_{\mu\nu\rho}$ we take the derivative of equation \ref{eq:numu},
+\begin{equation}
+\frac{2}{d} \p_\gamma \p_\sigma \ep^\sigma \eta_{\mu \nu}
+=\p_\gamma \p_\nu \ep_\mu
++ \p_\gamma \p_\mu \ep_\nu.
+\label{eq:per}
+\end{equation}
+ Permuting the indices into
+ \begin{equation}
+\frac{2}{d} \p_\mu \p_\sigma \ep^\sigma \eta_{\nu \gamma}=\p_\mu \p_\gamma \ep_\nu+ \p_\mu \p_\nu \ep_\gamma
+\label{eq:per1}
+\end{equation}
+and
+\begin{equation}
+\frac{2}{d} \p_\nu \p_\sigma \ep^\sigma \eta_{\gamma \mu}=\p_\nu \p_\mu \ep_\gamma+ \p_\nu \p_\gamma \ep_\mu
+\label{eq:per2}
+\end{equation}
+and then by adding equations \ref{eq:per} and \ref{eq:per1} and subtracting equation \ref{eq:per2} we get
+ 
+ $$
+\frac{2}{d}\big(\p_\gamma \p_\sigma \ep^\sigma \eta_{\mu \nu}
++\p_\mu \p_\sigma \ep^\sigma \eta_{\nu \gamma}
+-\p_\nu \p_\sigma \ep^\sigma \eta_{\gamma \mu}  \big)= 
+$$$$
+\bcancel{\p_\gamma \p_\nu \ep_\mu}
++ \p_\gamma \p_\mu \ep_\nu
++ \p_\mu \p_\gamma \ep_\nu
++ \cancel{\p_\mu \p_\nu \ep_\gamma}
+-\cancel{\p_\nu \p_\mu \ep_\gamma}
+- \bcancel{\p_\nu \p_\gamma \ep_\mu}.
+$$
+
+Defining
+$$
+\frac{1}{d}\p_\gamma \p_\sigma \ep^\sigma 
+\equiv b_\gamma
+$$
+and noting that
+$$
+\p_\gamma \p_\mu \ep_\nu
+ = c_{\nu \gamma \mu}
+$$
+we find that
+$$
+\big(b_\gamma \eta_{\mu \nu}
++b_\mu \eta_{\nu \gamma}
+-b_\nu\eta_{\gamma \mu}  \big)
+= c_{\nu \gamma \mu}.
+$$
+
+So if we set $a$ and $b$ to zero, equation \ref{eq:eps} equals
+$$
+\ep^\mu= 
+\eta^{\nu \rho}c_{\nu \gamma \mu}x^\gamma x^\mu
+=c\ein{\rho}{\gamma \mu}x^\gamma x^\mu
+=\eta^{\nu \rho}\Big(b_\gamma \eta_{\mu \nu}
++b_\mu \eta_{\nu \gamma}-b_\nu\eta_{\gamma \mu} \Big)x^\gamma x^\mu
+=
+$$$$
+\eta^{\nu \rho}\eta_{\mu \nu} b_\gamma x^\gamma x^\mu
++\eta^{\nu \rho}\eta_{\nu \gamma} b_\mu x^\gamma x^\mu
+-\eta^{\nu \rho}\eta_{\gamma \mu} b_\nu x^\gamma x^\mu=
+$$$$
+\delta^\rho _\mu b_\gamma x^\gamma x^\mu
++ \delta^\rho _\gamma b_\mu x^\gamma x^\mu 
+- b^\rho x^\mu x_\mu=
+$$$$
+b_\gamma x^\gamma x^\rho 
++b_\mu x^\rho x^\mu- b^\rho x^\mu x_\mu
+=2 b_\gamma x^\gamma x^\rho
+- b^\rho x^\mu x_\mu.
+$$
+
+ By adding up all the results, we get the following expression:
+ \begin{equation}
+ \ep^\mu (x)= a^\mu+ \omega \ein{\mu}{\nu}x^\nu + \alpha x^\mu+ 2b_\nu x^\nu x^\mu -b^\mu x^\nu x_\nu,
+ \end{equation}
+where $\alpha$ is an arbitrary scalar, $a^\mu$ and $b^\mu$ are arbitrary vectors and $\omega\ein{\mu}{\nu}$ is an arbitrary antisymmetric tensor.
+ 
+We can now find the generators for the conformal group. We introduce a scalar field $f(x)$ which thus must be invariant under our conformal transformation $f'(x)=f(x)\Rightarrow f'(x)=f(\Lambda^{-1} x)$. But the inverse of a conformal transformation must be another conformal transformation whence, using a Taylor expansion in $\ep$,
+
+\begin{gather*}
+f(x)=f(x+\ep)=f(x)+\ep^\mu \p_\mu f(x)+ \mathcal{O}(\ep^2) \approx \\ (1+\ep^\mu \p_\mu)f(x)=\big[1+(a^\mu+ \omega \ein{\mu}{\nu}x^\nu + \alpha x^\mu +2b_\nu x^\nu x^\mu -b^\mu x^\nu x_\nu)\p_\mu \big]f(x)= \\ \left[1+(a^\mu+\omega^{\mu\nu}x_\nu+\alpha x^\mu+2b^\nu x_\nu x^\mu-b^\mu x^\nu x_\nu)\p_\mu\right].
+\end{gather*}
+
+We now define the generators of the conformal group,
+\begin{align}
+&P_\mu=\p_\mu \\
+&D= x^\mu \p_\mu \\
+&M_{\mu \nu}=-\frac{1}{2}\big(x_\mu \p_\nu -x_\nu \p_\mu \big) \\
+&K_\mu=\big( 2x_\mu x^\nu \p_\nu - x^\nu x_\nu \p_\mu\big).
+\end{align}
+Since $\omega$ is antisymmetric we have
+
+$$\omega^{\mu\nu}x_\nu\partial_\mu=
+\frac{1}{2}\omega^{\mu\nu}(x_\nu\partial_\mu-x_\mu\partial_\nu)=-\frac{1}{2}\omega^{\mu\nu}(x_\mu\partial_\nu-x_\nu\partial_\mu)$$
+
+and $f(x)$ can be written as
+
+
+
+$$
+f(x)=(1+\ep^\mu \p_\mu)f(x)=(1+ a^\mu P_\mu+ \alpha D+ \omega^{\mu\nu}M_{\mu\nu}+b^\mu K_\mu  ) f(x)
+$$
+with these generators.

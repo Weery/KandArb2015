@@ -1,0 +1,48 @@
+\subsection{Q: Compute $\delta\mathcal{L}$ of the given Lagrange identity}
+
+\begin{align}  
+\mathcal{L} &= -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} 
+\label{eq:lagrange}\\
+F_{\mu\nu} &= \partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}\\
+F^{\mu\nu} &= \partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu} \label{eq:F-tensor}
+\end{align}
+
+$\mathcal{L} $ can be writen as 
+\begin{gather*}
+\mathcal{L}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}=-\frac{1}{4}(\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu})(\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu})\\=
+-\frac{1}{4}(\partial_\mu A_\nu \partial^\mu A^\nu-\partial_\mu A_\nu \partial^\nu A^\mu-\partial_\nu A_\mu \partial^\mu A^\nu+\partial_\nu A_\mu \partial^\nu A^\mu)\\=
+-\frac{1}{2}(\partial_\mu A_\nu \partial^\mu A^\nu-\partial_\mu A_\nu \partial^\nu A^\mu)
+\end{gather*}
+
+
+This give
+\begin{gather*}
+\delta \mathcal{L}=-\frac{1}{2}\big(\delta(\partial_\mu A_\nu \partial^\mu A^\nu)-(\delta(\partial_\nu A_\mu \partial^\nu A^\mu) \big).
+\label{eq:term}
+\end{gather*}
+
+The first term in equation \ref{eq:term} can be expanded as 
+\begin{gather*}
+\delta(\partial_\mu A_\nu \partial^\mu A^\nu)=\partial_\mu \delta A_\nu \partial^\mu A^\nu+ \partial_\mu A_\nu \partial^\mu \delta A^\nu+ \mathcal{O}(\delta A^2_\mu)\\=2\partial_\mu \delta A_\nu \partial^\mu A^\nu+\mathcal{O}(\delta A^2_\mu).
+\label{eq:delta}
+\end{gather*}
+The chain rule gives that 
+\[
+\partial _\mu (\delta A_\nu \partial ^\mu A^\nu)= \partial_\mu \delta A_\nu \partial^\mu A^\nu +  \delta A_\nu \partial_\mu \partial^\mu A^\nu
+. 
+\]
+The chain rule gives that
+\begin{gather*}
+2\partial_\mu \delta A_\nu \partial^\mu A^\nu+\mathcal{O}(\delta A^2_\mu)=2\big(\partial _\mu (\delta A_\nu \partial ^\mu A^\nu)-\delta A_\nu \partial_\mu \partial^\mu A^\nu\big)+\mathcal{O}(\delta A^2_\mu)\\=-2 \delta A_\nu \partial_\mu \partial^\mu A^\nu +\mathcal{O}(\delta A^2_\mu).
+\end{gather*}
+With the same approach as above we derive that the second term is equal to
+\[
+(\delta(\partial_\mu A_\nu \partial^\nu A^\mu)=-2 \delta A_\nu \partial_\mu \partial ^\nu A^\mu +  \mathcal{O}(\delta A^2_\mu).
+\]
+This give that equation \ref{eq:term} is 
+\begin{gather*}
+\delta \mathcal{L}=(\delta A_\nu \partial_\mu \partial^\mu A^\nu -\delta A_\nu \partial_\mu \partial ^\nu A^\mu)+\mathcal{O}(\delta A^2_\mu)\\=
+\delta A_\nu \partial_\mu( \partial^\mu A^\nu- \partial ^\nu A^\mu) +\mathcal{O}(\delta A^2_\mu)=\delta A_\nu \partial_\mu F^{\mu \nu}+ \mathcal{O}(\delta A^2_\mu)
+\end{gather*}
+
+, where we have used equation \ref{eq:F-tensor} in the last step. 

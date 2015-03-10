@@ -1,0 +1,182 @@
+\section{Week 6}
+\subsection{Determine the Riemann tensor of the 3-sphere.}
+
+Let us study the 3-sphere embedded in $\mathbb{R}^4$:
+
+$$
+x^2+y^2+z^2+w^2=L^2.
+$$
+
+We can parametrize this surface using hyperspherical coordinates $(\theta, \phi, \psi)$ as 
+
+!!REWRITE WITH STANDARD!!
+
+$$
+x=L\cos\theta,\;\;y=L\sin\theta\cos\phi,\;\;z=L\sin\theta\sin\phi\cos\psi,\;\;w=L\sin\theta\sin\phi\sin\psi,\;\;
+$$
+
+where
+
+$$
+0\leq\theta\leq\pi,\;\;\;0\leq\phi\leq\pi,\;\;\;0\leq\psi<2\pi.
+$$
+
+Using this coordinate system we find that the tangent basis vectors $(\partial_\theta, \partial_\phi, \partial_\psi)$ are expressed as 
+
+$$
+L\left(-\sin\theta, \cos\theta\cos\phi, \cos\theta\sin\phi\cos\psi, \cos\theta\sin\phi\sin\psi\right)
+$$
+$$
+L\left(0, -\sin\theta\sin\phi, \sin\theta\cos\phi\cos\psi, \sin\theta\sin\phi\sin\psi\right)
+$$
+$$
+L\left(0, 0, -\sin\theta\sin\phi\sin\psi, \sin\theta\sin\phi\cos\psi\right)
+$$
+
+in the usual euclidean basis. Now we can easily check that 
+
+$$
+|\partial_\theta|^2=L^2,\;\;\;|\partial_\phi|^2=L^2\sin^2\theta,\;\;\;|\partial_\psi|^2=L^2\sin^2\theta\sin^2\psi
+$$
+
+whence the metric $g_{\mu\nu}$ for our coordinate system $(\theta, \phi, \psi)$ is given by
+
+\begin{equation*}
+g_{\mu\nu}=\left(
+\begin{array}{ccc}
+L^2 & 0 & 0\\
+0 & L^2\sin^2\theta & 0\\
+0 & 0 & L^2\sin^2\theta\sin^2\phi
+\end{array}
+\right)
+\end{equation*}
+
+as our basis vectors are orthogonal. We can in usual fashion construct a local orthonormal frame at each point on the sphere using vielbeins $e\eii{a}{\mu}$ satisfying the condition $e\eii{a}{\mu}e\eii{b}{\nu}g_{\mu\nu}=\delta_{ab}$ where $\delta_{ab}$ is the Euclidean metric. Here these dreibeins $\eii{a}{\mu}$ and their inverses $\eii{\mu}{a}$ take the form
+
+\begin{equation*}
+e\eii{a}{\mu}=
+\begin{array}{cc}
+\left(
+\begin{array}{ccc}
+L^{-1} & 0 & 0\\
+0 & (L\sin\theta)^{-1} & 0\\
+0 & 0 & (L\sin\theta\sin\phi)^{-1}
+\end{array}
+\right),
+&
+e\eii{\mu}{a}=
+\left(
+\begin{array}{ccc}
+L & 0 & 0\\
+0 & L\sin\theta & 0\\
+0 & 0 & L\sin\theta\sin\phi
+\end{array}
+\right).
+\end{array}
+\end{equation*}
+
+Now that we've examined our coordinate system and our dreibeins we can construct the spin connection. We know that it can be expressed as
+
+$$
+\omega_{abc}=e\eii{[a}{\nu}e\eii{b]}{\mu}\partial_\mu e_{\nu c}-\eii{[b}{\nu}e\eii{c]}{\mu}\partial_\mu e_{\nu a}+e\eii{[c}{\nu}e\eii{a]}{\mu}\partial_\mu e_{\nu b}
+$$
+
+and by using our dreibeins we can express the derivatives of this expressions using kronicker deltas as 
+
+$$
+\partial_\mu e_{\nu c}=L\delta_\mu^\theta(\delta_\nu^\phi\delta_c^2\cos\theta+\delta_\nu^\psi\delta_c^3\cos\theta\sin\phi)+L\delta_\mu^\phi\delta_\nu^\psi\delta_c^3\sin\theta\cos\phi.
+$$
+
+By applying our dreibeins to this expression we find that 
+
+$$
+e\eii{a}{\nu}e\eii{b}{\mu}\partial_\mu e_{\nu c}=L^{-1}\delta_b^1(\delta_a^2\delta_c^2+\delta_a^3\delta_c^3)\cot\theta+L\delta_b^2\delta_a^3\delta_c^3(\sin\theta)^{-1}\cot\phi
+$$
+
+and similarly for all other terms with different permutations of $(a, b, c)$. Performing the sum of these terms we find that
+
+\begin{equation*}
+\omega_{abc}=L^{-1}\left(\delta_b^1\left(\delta_a^2\delta_c^2+\delta_a^3\delta_c^3\right)-\delta_c^1\left(\delta_b^2\delta_a^2+\delta_b^3\delta_a^3\right)\right)\cot\theta+
+\end{equation*}
+\begin{equation*}
++L^{-1}\left(\delta_b^2\delta_a^3\delta_c^3-\delta_c^2\delta_b^3\delta_a^3\right)\left(\sin\theta\right)^{-1}\cot{\phi}=
+\end{equation*}
+\begin{equation*}
+2L^{-1}\left(\delta_a^2\delta_{[b}^1\delta_{c]}^2+\delta_a^3\delta_{[b}^1\delta_{c]}^3\right)\cot\theta+2L^{-1}\delta_a^3\delta_{[b}^2\delta_{c]}^3(\sin\theta)^{-1}\cot\phi.
+\end{equation*}
+
+We now express our spin connection as a 1-form from $\omega_{abc}$
+
+$$
+\omega_{bc}=e\eii{\mu}{a}\omega_{abc}\mathrm{dx}^\mu=
+2\delta_{[b}^1\delta_{c]}^2\cos\theta\mathrm{d\phi}+2\left(\delta_{[b}^1\delta_{c]}^3\cos\theta\sin\phi+\delta_{[b}^2\delta_{c]}^3\cos\phi\right)\mathrm{d\psi}
+$$
+
+and further proceed by expressing the Riemann tensor for our sphere as a 2-form from $\omega_{bc}$ as
+
+$$
+R_{bc}=\mathrm{d}\omega_{bc}+\omega\eii{b}{a}\wedge\omega_{ac}=R_{\mu\nu bc}\mathrm{dx}^\mu\wedge\mathrm{dx}^\nu.
+$$
+
+Because we can write the exterior derivative as $\mathrm{dx}^\mu\partial_\mu$ the first term is easily seen to be
+
+\begin{equation*}
+-2\delta_{[b}^1\delta_{c]}^3\sin\theta\mathrm{d\theta}\wedge\mathrm{d\phi}
+-2\delta_{[b}^1\delta_{c]}^3\sin\theta\sin\phi\mathrm{d\theta}\wedge\mathrm{d\psi}+
+\end{equation*}
+\begin{equation*}
++2\left(\delta_{[b}^1\delta_{c]}^3\cos\theta\cos\phi-\delta_{[b}^2\delta_{c]}^3\sin\phi\right)\mathrm{d\phi}\wedge\mathrm{d\psi}
+\end{equation*}
+
+while the second term after a short calculation is found to be
+
+\begin{equation*}
+\delta^{ad}\left(2\delta_{[b}^1\delta_{a]}^2\cos\theta\mathrm{d\phi}+2\left(\delta_{[b}^1\delta_{a]}^3\cos\theta\sin\phi+\delta_{[b}^2\delta_{a]}^3\cos\phi\right)\mathrm{d\psi}\right)\wedge
+\end{equation*}
+\begin{equation*}
+\wedge\left(2\delta_{[d}^1\delta_{c]}^2\cos\theta\mathrm{d\phi}+2\left(\delta_{[d}^1\delta_{c]}^3\cos\theta\sin\phi+\delta_{[d}^2\delta_{c]}^3\cos\phi\right)\mathrm{d\psi}\right)=
+\end{equation*}
+\begin{equation*}
+2\left(\delta_{[b}^1\delta_{c]}^3\cos\theta\cos\phi-\delta_{[b}^2\delta_{c]}^3\cos^2\theta\sin\phi\right)\mathrm{d\phi}\wedge\mathrm{d\psi}.
+\end{equation*}
+
+
+Because of the symmetry properties of the Riemann tensor we thus find that it only has four nonzero independet components
+
+\begin{equation*}
+R_{\theta\phi13}=-\sin\theta,\;\;\;R_{\theta\psi13}=-\sin\theta\sin\phi,
+\end{equation*}
+\begin{equation*}
+\;\;\;R_{\phi\psi13}=2\cos\theta\cos\phi,\;\;\;R_{\phi\psi23}=-(1+\cos^2\theta)\sin\phi.
+\end{equation*}
+
+which in the local frame takes the form
+
+\begin{equation*}
+R_{1213}=-L^{-2},\;\;\;R_{1313}=-L^{-2},
+\end{equation*}
+\begin{equation*}
+\;\;\;R_{2313}=2L^{-2}\cot\theta\cot\phi(\sin\theta)^{-1},\;\;\;R_{2323}=-L^{-2}(1+\cos^2\theta)(\sin\theta\sin\phi)^{-1}.
+\end{equation*}
+
+and in the hyperspherical coordinate basis takes the form
+
+\begin{equation*}
+R_{\theta\phi\theta\psi}=-L^2\sin^2\theta\sin\phi,\;\;\;R_{\theta\psi\theta\psi}=-L^2\sin^2\theta\sin^2\phi,
+\end{equation*}
+\begin{equation*}
+\;\;\;R_{\phi\psi\theta\psi}=2L^2\cos\theta\sin\theta\cos\phi\sin\phi,\;\;\;R_{\phi\psi\phi\psi}=-L^2(1+\cos^2\theta)\sin^2\phi\sin^2\theta.
+\end{equation*}
+
+We proceed with creating the Ricci tensor from the Riemann tensor by contracting index 1 och 3,
+
+ \begin{equation*}
+ R_{\nu\sigma}=g^{\mu\rho}R_{\mu\nu\rho\sigma}=
+ \left(
+ \begin{array}{ccc}
+ -1 & & \\
+  & -(1+\cos^2\theta) & \\
+  & & -2\sin^2\phi\\
+ \end{array}
+ \right)
+ \end{equation*}

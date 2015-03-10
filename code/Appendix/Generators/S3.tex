@@ -1,0 +1,166 @@
+\section{Rewriting the commutation relations for the conformal group when rewriting M with one index}
+
+In the previous section we derived the Lie algebra for the conformal group of dimension $D>2$. We now specifically study the case $D=3$ where we can treat our rotations in a special way. In 3 dimensions we know that we can express rotations in a plane by specifying a vector normal to said plane. We thus define our 3 rotations using
+
+    $$
+    M^a=\ep\ein{a}{bc}M^{bc},
+    $$
+
+where $\ep \ein{a}{bc}$ is the Levi-Civita tensor. Now, as $M^{bc}$ is antisymmetric, we have
+
+    $$
+    M^a=\ep\ein{a}{bc}M^{bc} 
+    $$$$
+    \ep \ein{de}{a} M^a=\ep \ein{de}{a} \ep\ein{a}{bc} M^{bc}=-\de^{de}_{bc} M^{bc}=
+    $$$$
+    -\big( \de^{d}_{b}\de^{e}_{c}-\de^{d}_{c} \de^{e}_{b} \big) M^{bc}=
+    $$$$
+    -(M^{bc}-M^{cb})=-2 M^{bc}
+    $$
+    
+which leads to
+    
+    $$
+    M^{bc}=-\frac{1}{2}\ep\ein{bc}{a} M^a.
+    $$
+
+
+By rewriting equation \ref{eq:MP} we find that
+
+    $$
+    \big[M^{\mu \nu}, P_\rho \big]= \frac{1}{2} \big( \eta^{\rho \mu}P^\nu-\eta^{\nu \rho}P^\mu \big)
+    $$$$
+    -\frac{1}{2} \ep \ein{\mu \nu}{\gamma}
+    \big[M^{\gamma}, P^\rho \big]=\frac{1}{2}\big( \eta^{\rho \mu}P^\nu-\eta^{\nu \rho}P^\mu \big)
+    $$$$
+    -\frac{1}{2}\ep \ein{\sigma}{\mu \nu}\ep \ein{\mu \nu}{\gamma}
+    \big[M^{\gamma}, P^\rho \big]=\frac{1}{2} \ep \ein{\sigma}{\mu \nu} \big( \eta^{\rho \mu}P^\nu-\eta^{\nu \rho}P^\mu     \big)
+    $$$$
+    \de^\sigma_\gamma \big[M^{\gamma}, P^\rho \big]=
+    \frac{1}{2} \ep \ein{\sigma}{\mu \nu} \big( \eta^{\rho \mu}P^\nu-\eta^{\nu \rho}P^\mu \big)
+    $$$$
+    \big[M^{\gamma}, P^\rho \big]=\frac{1}{2}  \big( \ep\ein{\gamma \rho}{\nu}P^\nu-\ep\einthree{\gamma}{\mu}{\rho}P^\mu \big)=\ep\ein{\gamma \rho}{\nu}P^\nu
+    $$
+
+It is easy to by the similarity of equations \ref{eq:MP} and \ref{eq:MK} that this further implies
+
+    $$
+    \big[M^{\mu}, K^\nu \big]=\ep\ein{\mu \nu}{\sigma}K^\sigma.
+    $$
+
+Repeating this procedure for equation \ref{eq:MM} we have
+
+
+    $$
+    \big[M^{\mu \nu}, M^{\rho \gamma} \big]=\frac{1}{2}\big(
+    \eta^{\mu \rho} M^{\gamma \nu}+\eta^{\nu \gamma} M^{\rho \mu}-\eta^{\mu \gamma} M^{\rho \nu}-\eta^{\nu \rho} M^{\gamma \mu}\big).
+    $$
+    $$
+    (-\frac{1}{2}\ep\ein{\mu \nu}{a})(-\frac{1}{2}\ep\ein{\rho \gamma}{b})\big[M^{a}, M^{b} \big]=\frac{1}{4}
+    \ep\ein{\mu \nu}{a}
+    \ep\ein{\rho \gamma}{b}
+    \comb{M^{a}}{ M^{b}}.
+    $$
+    By introducing $\ep\ein{c}{\mu \nu}$ and $\ep\ein{d}{\rho \gamma}$ to the LHS, we gain
+    $$    \frac{1}{4} \ep\ein{c}{\mu \nu}\ep\ein{\mu \nu}{a}
+    \ep\ein{d}{\rho \gamma}\ep\ein{\rho \gamma}{b}\big[M^{a}, M^{b} \big]=
+\de^c_a \de^d_b\big[M^{a}, M^{b} \big]=
+   \big[M^{c}, M^{d} \big]
+   % \frac{1}{2} \ep\ein{c}{\mu \nu} \ep\ein{d}{\rho \gamma}\big(\eta^{\mu \rho} M^{\gamma \nu}+\eta^{\nu \gamma} M^{\rho \mu}-\eta^{\mu \gamma} M^{\rho \nu}-\eta^{\nu \rho} M^{\gamma \mu} \big)
+    $$
+
+which gives us
+
+\begin{equation}
+    \big[M^{a}, M^{b} \big]=\frac{1}{2} \ep\ein{a}{\mu \nu} \ep\ein{b}{\rho \gamma}\big(\eta^{\mu \rho} M^{\gamma \nu}+\eta^{\nu \gamma} M^{\rho \mu}-\eta^{\mu \gamma} M^{\rho \nu}-\eta^{\nu \rho} M^{\gamma \mu} \big).
+    \label{eq:parts}
+\end{equation}
+
+
+Now we evaluate the different parts of the RHS. Starting with the first term we find \todo[inline]{Rewrite the caluclations below without 1/2. And do another step to bring it out of the prenentais}
+
+
+    $$
+    \ep\ein{a}{\mu \nu} \ep\ein{b}{\rho \gamma}\eta^{\mu \rho} M^{\gamma \nu}
+    =
+-\frac{1}{2}\ep\ein{a}{\mu \nu} \ep\ein{b}{\rho\gamma}\eta^{\mu \rho} \ep \ein{\gamma \nu}{c }M^{c}=
+-\frac{1}{2}\ep\ein{a \rho}{ \nu} \ep\ein{b}{\rho\gamma} \ep \ein{\gamma \nu}{c }M^{c}=
+    $$
+    $$
+    -\frac{1}{2}\eta_{\nu d}\eta^{b f}\ep^{a \rho d} \ep_{f\rho\gamma} \ep \ein{\gamma \nu}{c }M^{c}=
+    \frac{1}{2}\eta_{\nu
+   d}\eta^{b f}\de^{ad}_{f \gamma} \ep \ein{\gamma \nu}{c}M^{c}=
+    \frac{1}{2}\eta_{\nu d}\eta^{b f}(\de_f^a\de_\gamma^d-\de_\gamma^a\de_f^d)\ep\ein{\gamma\nu}{c}M^c=
+    $$
+    $$
+    \frac{1}{2}\eta_{\nu \gamma}\eta^{b a}\ep\ein{\gamma\nu}{c}M^c
+    -\frac{1}{2}\eta_{\nu d}\eta^{b d}\ep\ein{a\nu}{c}M^c=-\frac{1}{2}\ep\ein{ab}{c}M^c
+    $$
+
+In similar fashion the second term is found to be
+    $$
+-\frac{1}{2}\ep\ein{a}{\mu \nu}\ep\ein{b}{\rho\gamma}\eta^{\nu \gamma}\ep\ein{\rho\mu}{c} M^{c}=
+\frac{1}{2}\ep\ein{a\gamma}{\mu}\ep\ein{b}{\rho\gamma}\ep\ein{\rho\mu}{c} M^{c}
+=\frac{1}{2} 
+\eta_{\mu d}\eta^{b f}
+\ep^{a \gamma d} \ep_{f \rho \gamma}\ep\ein{\rho\mu}{c} M^{c}=
+$$$$
+\frac{1}{2}\eta_{\mu d}\eta^{b f}\de_{f\rho}^{ad}\ep\ein{\rho\mu}{c} M^{c}=
+\frac{1}{2}\eta_{\mu\rho}\eta^{ba}\ep\ein{\rho\mu}{c}M^c
+-\frac{1}{2}\eta_{\mu d}\eta^{b d}\ep\ein{a\mu}{c}M^c
+=-\frac{1}{2}\ep\ein{ab}{c}M^c,
+$$
+    
+, the third term is
+
+\begin{gather*}
+    -\ep\ein{a}{\mu \nu} \ep\ein{b}{\rho \gamma}\eta^{\mu \gamma} M^{\rho \nu}=
+    \frac{1}{2}\ep\ein{a}{\mu \nu} \ep\ein{b}{\rho \gamma}\eta^{\mu \gamma}\ep\ein{\rho \nu}{c} M^c=
+    \frac{1}{2}\ep\ein{a \gamma}{\nu} \ep\ein{b}{\rho \gamma}\ep\ein{\rho \nu}{c}M^c=
+    \\
+    \frac{1}{2}\eta_{\nu f}\eta^{be}\ep^{a \gamma f} \ep_{e \rho \gamma}\ep\ein{\rho \nu}{c} M^c=\frac{1}{2}\eta_{\nu f}\eta^{be}\de^{a f}_{e \rho}\ep\ein{\rho \nu}{c} M^c=
+    \\
+    \frac{1}{2}\eta_{\nu \rho}\eta^{ba}\ep\ein{\rho \nu}{c} M^c-\frac{1}{2}\eta_{\nu e}\eta^{be} \ep\ein{a \nu}{c} M^c
+    =-\frac{1}{2}\ep\ein{a b}{c} M^c.
+\end{gather*}
+
+and finally the fourth term
+
+    $$
+    \frac{1}{2}\ep\ein{a}{\mu \nu} \ep\ein{b}{\rho \gamma}\eta^{\nu \rho}\ep\ein{\gamma \mu}{c} M^c=
+    \frac{1}{2}\eta_{\mu f}\eta^{b e}\ep^{af\rho}\ep_{e\rho\gamma}\ep\ein{\gamma \mu}{c} M^c=
+    \frac{1}{2}\eta_{\mu f}\eta^{b e}\de_{e\gamma}^{af}\ep\ein{\gamma \mu}{c} M^c=
+    $$
+    $$
+    \frac{1}{2}\eta_{\mu \gamma}\eta^{b a}\ep\ein{\gamma \mu}{c} M^c-\frac{1}{2}\eta_{\mu e}\eta^{b e}\ep\ein{a \mu}{c} M^c=-\frac{1}{2}\ep\ein{ab}{c}M^c.
+    $$
+    
+Summing all these terms we finally arrive at
+
+$$
+\comb{M^a}{M^b}=0.
+$$
+
+The last equation containing $M^{\mu\nu}$ and therefore the last we have to rewrite is equation \ref{eq:PK}.
+
+\begin{gather*}
+    \big[P^{\mu}, K^\nu \big]=2 \big( \eta^{\mu \nu}D+ 2M^{\mu \nu}\big)=2 \big( \eta^{\mu \nu}D+2(-\frac{1}{2}\ep\ein{\mu \nu}{c}M^c) \big)
+    \\
+    =2 \eta^{\mu \nu}D-2 \ep\ein{\mu \nu}{c}M^c
+\end{gather*}
+
+
+So to sum up we derived the following equations when M only contains one index instead of two. 
+
+
+\begin{gather*}
+    \big[M^{a}, P^b \big]=\ep\ein{a b}{c}P^c
+    \\
+    \big[M^{a}, K^b \big]=\ep\ein{a b}{c}K^c\\
+    \big[M^{a}, M^{b} \big]=0
+    \\
+    \big[P^{\mu}, K^\nu \big]=2 \eta^{\mu \nu}D-2 \ep\ein{\mu \nu}{c}M^c\\
+    \big[D, P^\mu \big]=-P^\mu 
+    \\
+    \big[D, K^\mu \big]=K^\mu
+\end{gather*}

@@ -1,0 +1,24 @@
+\subsection{Q: Show that $\Lambda_{\alpha}^{a}\Lambda_{\beta}^{b}\Lambda_{\gamma}^{c}\Lambda_{\delta}^{d}\epsilon^{\alpha\beta\gamma\delta}=\epsilon^{abcd} \Rightarrow \det \Lambda= 1$}
+The definition of the determinant of a matrix $A$ is:
+\begin{align}
+\det A &\equiv \epsilon_{\alpha\beta\gamma\delta}A^{\alpha}_{0}A^{\beta}_{1}A^{\gamma}_{2}A^{\delta}_{3} & \text{if} \, \epsilon_{0123}&=1\\
+&\equiv \epsilon^{\alpha\beta\gamma\delta}A_{\alpha}^{0}A_{\beta}^{1}A_{\gamma}^{2}A_{\delta}^{3} & \text{if} \, \epsilon^{0123}&=1
+\end{align}
+Then we can write the determinant of $\Lambda$ as
+\begin{equation}
+\label{eq:detlambda}
+\det \Lambda = \epsilon_{\alpha\beta\gamma\delta}\Lambda^{\alpha}_{0}\Lambda^{\beta}_{1}\Lambda^{\gamma}_{2}\Lambda^{\delta}_{3}.
+\end{equation}
+In the question we are given that 
+\begin{equation}
+\Lambda_{\alpha}^{a}\Lambda_{\beta}^{b}\Lambda_{\gamma}^{c}\Lambda_{\delta}^{d}\epsilon^{\alpha\beta\gamma\delta}=\epsilon^{abcd}
+\end{equation}
+and by raising/lowering all indices we get
+\begin{equation}
+\label{eq:epsilonlambda}
+\Lambda^{\alpha}_{a}\Lambda^{\beta}_{b}\Lambda^{\gamma}_{c}\Lambda^{\delta}_{d}\epsilon_{\alpha\beta\gamma\delta}=\epsilon_{abcd}
+\end{equation}
+(all $-1$ products that arises cancels out). If we insert equation \ref{eq:epsilonlambda} in \ref{eq:detlambda} we get 
+\begin{equation}
+\det \Lambda = \epsilon_{0123} = 1
+\end{equation}

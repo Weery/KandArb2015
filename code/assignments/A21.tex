@@ -1,0 +1,28 @@
+\section{Week 2}
+\subsection{Q: Write the D'Alembertian $\Box$ operator in differential form}
+
+The  D'Alembertian operator in (t,x,y,z) has the form stated below.
+
+\begin{equation}
+\Box=\frac{1}{c^{2}} \frac{\partial^2}{\partial t^2} - \frac{\partial^2}{\partial x^2} - \frac{\partial^2}{\partial y^2} - \frac{\partial^2}{\partial z^2}=   \frac{1}{c^2} {\partial^2 \over \partial t^2} - \nabla^2
+\label{eq:d'al}
+\end{equation}
+
+
+
+In this assignment we use natural units, which give us $c=1$.
+
+We expect the $\Box$ operator consist of two exterior derivatives and be a $0$-form. 
+This can only be constructed in one way which is $\star \mathrm{d} \star \mathrm{d}$ which gives
+\[
+\star \mathrm{d} \star \mathrm{d} f=\star \mathrm{d} \star(\mathrm{d}x^{\mu} \partial_\mu f)=\star \mathrm{d} \star(\mathrm{d}t \partial_t f + dx^i \partial_i f)=\star \mathrm{d}(dx_1\wedge dx_2 \wedge dx_3 \partial_t f+ dt\wedge dx_j \wedge dx_k \partial_i f)=\]
+\[ \star(dt\wedge dx_1\wedge dx_2 \wedge dx_3 {\partial_t}^2 f+ dx_i\wedge dt\wedge dx_j \wedge dx_k {\partial_i}^2 f)=\star(dt\wedge dx_1\wedge dx_2 \wedge dx_3 {\partial_t}^2 f- dt\wedge dx_i\wedge dx_j \wedge dx_k {\partial_i}^2 f)
+\]
+\[=-{\partial_t}^2 f+{\partial_i}^2 f=-\frac{\partial^2 f}  {\partial t^2} + \nabla^2 f.
+\]
+This is the same as in equation \ref{eq:d'al} if the signs are changed which gives that $\Box$ operator is $(-\star \mathrm{d} \star \mathrm{d})$ in differential form. 
+
+
+
+
+

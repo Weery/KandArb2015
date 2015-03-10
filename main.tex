@@ -1,0 +1,49 @@
+\documentclass[12pt,a4paper,twoside,openright]{report}
+
+\include{code/settings}
+\include{code/macros}
+
+\begin{document}
+
+\pagenumbering{roman}			% Roman numbering (starting with i (one)) until first main chapter
+\input{./code/frontpage/front}
+
+% ABSTRACT
+\newpage
+\input{./code/frontpage/Abstract}
+
+% ACKNOWLEDGEMENTS
+\newpage
+%\input{./code/frontpage/Acknowledgements}
+
+\tableofcontents
+
+\newpage
+
+\chapter{Rapport}
+
+\input{./code/theory/Rapport.tex}
+
+\chapter{Theory}
+
+\setcounter{page}{1}
+\pagenumbering{arabic}			% Arabic numbering starting from 1 (one)
+
+\input{./code/theory/Theory.tex}
+
+\chapter{Assignments}
+
+\input{./code/assignments/Assignments.tex}
+
+\appendix
+\input{./code/Appendix/Appendix.tex}
+
+
+\newpage
+\printbibliography
+\newpage
+\printindex
+
+
+
+\end{document}

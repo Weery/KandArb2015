@@ -1,0 +1,42 @@
+\section{Week 3}
+\subsection{Q: Find C from $-\frac{1}{4}\int F_{\mu \nu} F^{\mu \nu} \mathrm{d}^4x=C \int F \wedge \star F$ and write $F \wedge  F$ with index notation}
+$F$ can be writen as 
+\begin{equation}
+F=\frac{1}{2}\mathrm{d}x^{\mu} \wedge \mathrm{d }x^{\nu} F_{\mu\nu}
+\label{eq:F2}
+\end{equation}
+where $F_{\mu \nu}$ in natural units (c=1) equals
+\begin{equation}
+F_{\mu\nu} = \begin{pmatrix} 0 & -E_x & -E_y & -E_z \\ E_x & 0 & B_z & -B_y \\ E_y & -B_z & 0 & B_x \\ E_z & B_y & -B_x & 0 \end{pmatrix}.
+\label{eq:F-mat2}
+\end{equation} 
+
+We can now find $F^{\mu \nu}$  as below.
+
+\begin{equation}
+F_{\mu \nu}=\eta_{\mu \alpha} F^\alpha _\nu=\eta_{\mu \alpha} F^{\alpha \beta} \eta_{\beta \nu}
+\label{eq:upp}
+\end{equation}
+
+
+We define the metric tensor as below. 
+
+\begin{equation}
+\eta_{\mu \nu} = \begin{pmatrix}-1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix}
+\label{eq:metric}
+\end{equation}
+From the relation in equation \ref{eq:upp} and \ref{eq:metric}  can we see that$F_{\mu \mu}=F^{\mu \mu}$, $F_{i j}=F^{i j}$, $F_{0 i}=-F^{0 i}$ and $F_{i 0}=-F^{i 0}$ where $\mu=0,1,2,3$ and $i,j=1,2, 3$.
+Thus
+\[
+F^{\mu\nu} =  \begin{pmatrix} 0 & E_x & E_y & E_z \\ -E_x & 0 & B_z & -B_y \\ -E_y & -B_z & 0 & B_x \\ -E_z & B_y & -B_x & 0 \end{pmatrix},
+\label{eq:F-matUpp}
+\]
+
+ which give $-\frac{1}{4}F_{\mu \nu} F^{\mu \nu}=\frac{1}{2} (\vec{E}^2-\vec{B}^2)$. 
+ 
+ Equation \ref{eq:F2} gives 
+ 
+ \begin{gather*}
+  F\wedge \star F=(\frac{1}{2}\mathrm{d }x^{\mu} \wedge \mathrm{d }x^{\nu} F_{\mu\nu})\wedge \star (\frac{1}{2}\mathrm{d}x^{\alpha} \wedge \mathrm{d}x^{\beta} F_{\alpha\beta})= \\
+\big(\mathrm{d}t \wedge \mathrm{d}x(-E_x)+\mathrm{d}t \wedge \mathrm{d}y(-E_y)+ \mathrm{d}t \wedge \mathrm{d}z(-E_z)+\mathrm{d}x \wedge \mathrm{d}y () \big)
+\end{gather*}

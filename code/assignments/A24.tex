@@ -1,0 +1,148 @@
+
+\subsection{Q: Solve $\Lambda\Lambda\eta=\eta$ for $\varepsilon(x)$ where $\Lambda=\delta+\frac{\partial \varepsilon}{\partial x}+\mathcal{O}(\varepsilon^2)$}\label{sec:A24}
+
+$$\Lambda\ein{\mu}{\nu}=\pder{\tilde{x}^\mu}{x^\nu}$$
+
+$$\tilde{x}^\mu=x^\mu+\varepsilon^\mu(x)$$
+
+$$\Lambda\ein{\mu}{\nu}=\delta^\mu_\nu+\pder{\varepsilon^\mu}{x^\nu}$$
+
+$$\pder{\Lambda\ein{\mu}{\nu}}{x^{\gamma}}=\ppder{\tilde{x}^\mu}{x^\nu}{x^\gamma}=\ppder{\varepsilon^\mu}{x^\nu}{x^\gamma}$$
+
+
+
+$$\Lambda\ein{\mu}{\nu}\Lambda\ein{\rho}{\gamma}\eta_{\mu\rho}=\eta_{\nu\gamma}$$
+
+
+$$\pder{\tilde{x}^\mu}{x^\nu}\,\pder{\tilde{x}^\rho}{x^\gamma}\eta_{\mu\rho}=\eta_{\nu\gamma}$$
+
+
+$$
+\ppder{\tilde{x}^\mu}{x^\nu}{x^\kappa}\,\pder{\tilde{x}^\rho}{x^\gamma}\eta_{\mu\rho}
++\pder{\tilde{x}^\mu}{x^\nu}\,\ppder{\tilde{x}^\rho}{x^\gamma}{x^\kappa}\eta_{\mu\rho}=0
+$$
+
+but as
+
+$$\eta_{\mu\rho}=\eta_{\rho\mu}$$
+
+and that we contract with $\mu$ and $\rho$ that $\eta_{\mu\rho}$ has the requirment
+
+\[\eta_{\mu\nu} = \left\{
+  \begin{array}{lr}
+    \pm1 & $if $ \nu=\mu\\
+    0 & $if $ \nu\neq\mu
+  \end{array}
+\right.
+\]
+
+gives
+
+$$\ppder{\tilde{x}^\mu}{x^\nu}{x^\kappa}\,\pder{\tilde{x}^\rho}{x^\gamma}\eta_{\mu\rho}=\pder{\tilde{x}^\mu}{x^\nu}\,\ppder{\tilde{x}^\rho}{x^\gamma}{x^\kappa}\eta_{\mu\rho}$$
+
+thus
+
+
+$$
+2\ppder{\tilde{x}^\mu}{x^\nu}{x^\kappa}\,\pder{\tilde{x}^\rho}{x^\gamma}\eta_{\mu\rho}=0
+$$
+
+but as
+
+$$\pder{\tilde{x}^\rho}{x^\gamma}=\Lambda\ein{\rho}{\gamma}\neq0$$
+
+We conclude that 
+
+$$\ppder{\tilde{x}^\mu}{x^\nu}{x^\kappa}=0$$
+
+This means that
+
+$$\ppder{\varepsilon^\mu}{x^\nu}{x^\gamma}=\ppder{\tilde{x}^\mu}{x^\nu}{x^\gamma}=0$$
+
+Thus $\varepsilon^\mu(x)$ has to be a linear equation
+
+We can therefore write it as:
+
+$$\varepsilon^{\mu}(x)=a^\mu+\omega\ein{\mu}{\nu}x^\nu$$
+
+\subsubsection{Constructing the Lie algebra for the Poincare group}
+
+before continuing we want to show that 
+
+$$\omega_{\mu\nu}=-\omega_{\nu\mu}$$
+
+but having defined $\varepsilon$ this way we find that 
+
+$$\pder{\varepsilon^\mu}{x^\nu}=\partial_\nu(a^\mu+\omega\ein{\mu}{\gamma}x^{\gamma})=\omega\ein{\mu}{\gamma}\delta_{\gamma\nu}=\omega\ein{\mu}{\nu}$$
+
+thus we can rewrite $\Lambda$ as
+
+$$\Lambda\ein{\mu}{\nu}=\delta^\mu_\nu+\omega\ein{\mu}{\nu}$$
+
+$$\Lambda\ein{\mu}{\nu}\Lambda\ein{\rho}{\gamma}\eta_{\mu\rho}=\eta_{\nu\gamma}$$
+
+$$(\delta^\mu_\nu+\omega\ein{\mu}{\nu})(\delta^\rho_\gamma+\omega\ein{\rho}{\gamma})\eta_{\mu\rho}=\eta_{\nu\gamma}$$
+
+$$(\delta^\mu_\nu\delta^\rho_\gamma+\delta^\mu_\nu\omega\ein{\rho}{\gamma}+\omega\ein{\mu}{\nu}\delta^\rho_\gamma+\omega\ein{\mu}{\nu}\omega\ein{\rho}{\gamma})\eta_{\mu\rho}=\eta_{\nu\gamma}$$
+
+
+$$(\delta^\mu_\nu\omega\ein{\rho}{\gamma}+\omega\ein{\mu}{\nu}\delta^\rho_\gamma+\omega\ein{\mu}{\nu}\omega\ein{\rho}{\gamma})\eta_{\mu\rho}=0$$
+
+
+$$\delta^\mu_\nu\omega\ein{\rho}{\gamma}\eta_{\mu\rho}
++\omega\ein{\mu}{\nu}\delta^\rho_\gamma\eta_{\mu\rho}
++\omega\ein{\mu}{\nu}\omega\ein{\rho}{\gamma}\eta_{\mu\rho}=0$$
+
+$$\delta^\mu_\nu\omega_{\mu\gamma}+\omega_{\rho\nu}\delta^\rho_\gamma+\omega\ein{\mu}{\nu}\omega\ein{\rho}{\gamma}\eta_{\mu\rho}=0$$
+
+$$\omega_{\nu\gamma}+\omega_{\gamma\nu}+\omega\ein{\mu}{\nu}\omega\ein{\rho}{\gamma}\eta_{\mu\rho}=0$$
+
+But as $\varepsilon$ is a inifitesmal transformation we take
+
+%Jag var inte säker på detta steget men vi behöver visa att 
+%Behöver tänka på detta steget....
+$$\omega\ein{\mu}{\nu}\omega\ein{\rho}{\gamma}\eta_{\mu\rho}=0$$
+
+Thus 
+
+$$\omega_{\mu\nu}=-\omega_{\nu\mu}$$
+
+Now we create a general scalar field $f$ (indecies are suppressed inside the functions) then
+
+$$f(\tilde{x})=f(x+a+wx)$$
+
+We now taylor expand this around $x$ so
+
+$$f(\tilde{x})=f(x)+(a^\mu+\omega\ein{\mu}{\nu}x^\nu)\partial_\mu f(x)$$
+
+From which we get
+
+$$f(\tilde{x})=(1+a^\mu\partial_\mu+\omega\ein{\mu}{\nu}x^\nu\partial_\mu) f(x)$$
+
+or
+$$f(\tilde{x})=(1+a_\mu\partial^\mu+\omega_{\mu\nu}x^\nu\partial^\mu) f(x)$$
+
+
+but as $\omega_{\mu\nu}=-\omega_{\nu\mu}$ it means that 
+
+$$\omega_{\mu\nu}x^\nu\partial^\mu=\frac{1}{2}\omega_{\mu\nu}(x^\nu\partial^\mu+x^\mu\partial^\nu)$$
+
+This means we can rewrite
+
+$$f(\tilde{x})=(1+a_\mu\partial^\mu+\frac{1}{2}\omega_{\mu\nu}(x^\nu\partial^\mu+x^\mu\partial^\nu)) f(x)$$
+
+We now define
+
+$$M^{\mu\nu}=-i(x^\nu\partial^\mu+x^\mu\partial^\nu)$$
+
+and
+
+$$P^\mu=-i\partial^\mu$$
+
+From which we get
+
+$$f(\tilde{x})=(1+ia_\mu P^\mu+\frac{i}{2}\omega_{\mu\nu}M^{\mu\nu}) f(x)$$
+
+
+%Jag tar denna och lägger till lite extra som ger oss generatorerna //RIS
+

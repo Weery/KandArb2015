@@ -1,0 +1,159 @@
+\subsection{Q: Solve $\Lambda\Lambda\eta=A(x)\eta$ for $\epsilon(x)$ with $\Lambda$ as in \ref{sec:A24} }
+
+\begin{equation}
+\tilde{x} ^\mu=x^\mu+\epsilon^\mu (x)+ \mathcal{O}(\epsilon^2)
+\label{eq:tilde}
+\end{equation}
+
+
+
+\begin{equation}
+\Lambda^\rho _\mu \Lambda ^\sigma _\nu \eta_{\rho \sigma}=C(x) \eta_{\mu \nu}
+\label{eq:orgin}
+\end{equation}
+
+which can be written as
+$$
+\frac{\partial \tilde{x}^\rho}{\partial x^\mu} \frac{\partial \tilde{x}^\sigma}{\partial x^\nu} \eta_{\rho \sigma}=C(x) \eta_{\mu \nu}. 
+$$
+This together with equation \ref{eq:tilde} give
+\[
+\eta_{\rho \sigma}(\delta^\rho _\mu + \frac{\partial \epsilon ^\rho}{\partial x^\mu}+\mathcal{O}(\epsilon^2))(\delta^\sigma _\nu + \frac{\partial \epsilon ^\sigma}{\partial x^\nu}+\mathcal{O}(\epsilon^2))=C(x) \eta_{\mu \nu}.
+\]
+Now we can write this as
+\[
+(C(x)-1)\eta_{\mu \nu}=\eta_{\rho \sigma}(\delta^\rho _\mu \frac{\partial \epsilon ^\sigma (x)}{\partial x^\nu}+\delta^\sigma _\nu \frac{\partial \epsilon ^\rho (x)}{\partial x^\mu}+\mathcal{O}(\epsilon^2))=
+\] 
+\[
+\eta_{\mu \sigma}\frac{\partial \epsilon^\sigma (x) }{\partial x^\nu}+
+\eta_{\rho \nu}\frac{\partial \epsilon^\rho (x) }{\partial x^\mu}+\mathcal{O}(\epsilon^2)
+=\frac{\partial \epsilon_\mu (x)}{\partial x^\nu}+\frac{\partial \epsilon_\nu (x)}{\partial x^\mu}+\mathcal{O}(\epsilon^2) \]
+
+To simplify the expression we denote $(C(x)-1)=A(x)$ and neglect $\mathcal{O}(\epsilon^2)$ term for the rest of the calculation. 
+We also state for the reader that we denote $\eta^{\mu \nu} \eta_{\mu \nu}=d$. 
+We continue to expand the expression by multiplying both sides with $\eta^{\mu \nu}$ from the right side.
+
+$$
+A(x)\eta_{\mu \nu} \eta^{\mu \nu}=A(x)d= \eta^{\mu \nu}\frac{\partial \epsilon_\mu (x)}{\partial x^\nu}+\eta^{\mu \nu}\frac{\partial \epsilon_\nu (x)}{\partial x^\mu}=2\frac{\partial \epsilon ^\sigma (x)}{\partial x^\sigma} \Rightarrow
+$$
+$$
+A(x)=\frac{2 \partial \epsilon ^\sigma}{d \partial x^\sigma }
+$$
+
+
+In the expression above we used $\sigma$ to indicate that this index is summed over.
+To find $\epsilon(x)$ we use the $A(x)$ we derived above and put it in equation \ref{eq:orgin}. 
+\begin{gather}
+A(x) \eta_{\mu \nu}= \frac{2 \partial \epsilon ^\sigma}{d \partial x^\sigma } \eta_{\mu \nu}=\frac{\partial \epsilon_\mu (x)}{\partial x^\nu}+\frac{\partial \epsilon_\nu (x)}{\partial x^\mu}
+\label{eq:nu mu}
+\end{gather}
+By multiplying both sides with $\frac{\partial }{\partial x^\rho}\eta^{\rho \nu}$ and change $\sigma\rightarrow \mu$ since $\sigma$ is not summed up in this expression we get
+\[
+ \frac{2}{d}\frac{ \partial^2 \epsilon ^\mu}{ \partial x^\mu \partial x^\rho  } \eta^{\rho \nu} \eta_{\mu \nu}=\frac{\partial^2 \epsilon_\mu (x)}{\partial x^\rho \partial x^\nu}\eta^{\rho \nu}+\frac{\partial^2 \epsilon_\nu (x)}{\partial x^\rho \partial x^\mu}\eta^{\rho \nu}.
+\]
+
+To simplify we denote $\frac{\partial}{\partial x^\nu}=\partial _\nu$ and $\frac{\partial}{\partial x^\mu}\eta^{\mu \nu}=\partial^\nu$ which give us   
+\[%eventuellt fel i index, kolla senare%
+\frac{2}{d} \partial_\mu \partial^\nu \epsilon_\nu(x) =\partial^\nu \partial_\nu \epsilon_\mu(x)+\partial_\mu \partial^\nu \epsilon_\nu(x).
+\]
+We multiply this expression with $\partial _\nu$ and sum up which give
+\[
+\frac{2}{d}\partial_\nu \partial_\mu(\partial^\sigma \epsilon_\sigma(x))=\partial_\nu(\partial^\sigma \partial_\sigma\epsilon_\mu (x))+\partial_\nu \partial_\mu(\partial^\sigma \epsilon_\sigma(x)).
+\]
+By alternate the index we get the following expression
+\begin{gather*}
+\frac{2}{d}\partial_\nu \partial_\mu(\partial^\sigma \epsilon_\sigma(x))+\frac{2}{d}\partial_\mu \partial_\nu(\partial^\sigma \epsilon_\sigma(x))=\\\partial_\nu(\partial^\sigma \partial_\sigma\epsilon_\mu (x))+\partial_\nu \partial_\mu(\partial^\sigma \epsilon_\sigma(x))+\partial_\mu(\partial^\sigma \partial_\sigma\epsilon_\nu (x))+\partial_\mu \partial_\nu(\partial^\sigma \epsilon_\sigma(x))\\ \leftrightarrow
+\frac{4}{d}\partial_\mu \partial_\nu(\partial^\sigma \epsilon_\sigma(x))=2\partial_\mu \partial_\nu(\partial^\sigma \epsilon_\sigma(x))+\partial^\sigma \partial_\sigma(\partial_\nu \epsilon_\mu(x) +\partial_\mu \epsilon_\nu(x))
+\end{gather*}
+By using equation \ref{eq:nu mu} we find that
+\begin{gather*}
+\frac{4}{d}\partial_\mu \partial_\nu(\partial^\sigma \epsilon_\sigma(x))=2\partial_\mu \partial_\nu(\partial^\sigma \epsilon_\sigma(x))+\partial^\sigma2 \partial_\sigma(\frac{2}{d}\frac{ \partial \epsilon ^\rho}{ \partial x^\rho } \eta_{\rho \nu})\\\leftrightarrow 2\partial_\mu \partial_\nu(\partial^\sigma \epsilon_\sigma(x))=d\partial_\mu \partial_\nu(\partial^\sigma \epsilon_\sigma(x))+\partial^\sigma \partial_\sigma (\frac{ \partial \epsilon ^\rho}{ \partial x^\rho } \eta_{\rho \nu})\\ \leftrightarrow (\eta_{\rho \nu}\partial^\sigma \partial_\sigma+(d-2)\partial_\mu \partial_\nu)\partial^\sigma \epsilon_\sigma(x)=0\\
+\leftrightarrow (2(d-1)\partial^\rho \partial_\rho)\partial^\sigma \epsilon_\sigma(x)=0
+\end{gather*}
+ Which give us that 
+ \[
+ \epsilon^\mu(x)=A^\mu +B^\mu _\nu x^\nu+ C^\mu _{\nu \rho} x^\nu x^\rho.
+ \]
+ 
+ Now we will examine how the coefficients must behave for the transformation to be conform by using equation \ref{eq:nu mu} which give:
+ \[
+  \frac{2}{d} \partial_{\sigma} \epsilon^\sigma \eta_{\mu \nu}=\partial_\nu \epsilon_\mu +\partial_\mu \epsilon_\nu  \].
+  
+  
+  \[
+  \epsilon_\mu= a_\mu +b_{\mu \nu}x^\nu+c_{\mu \nu \gamma}x^\nu x^\gamma
+  \]
+  
+  \[
+  \partial_\nu \epsilon_\mu=\partial_\nu b_{\mu \gamma}x^\gamma+\partial_\nu c_{\mu \gamma \sigma} x^\gamma x^\sigma=b_{\mu \nu}+ c_{\mu \nu \sigma}x^\sigma+c_{\mu \gamma \nu}x^\gamma
+  \]
+ 
+\begin{gather*} \partial_\mu \epsilon^\mu= \partial_\mu b\ein{\mu}{\nu}x^\nu +\partial_\mu c\ein{\mu}{\nu \gamma}x^\gamma x^\mu= \\ b\ein{\mu}{\nu}+c\ein{\mu}{\mu \gamma} x^\gamma+c\ein{\mu}{\nu \mu} x^\nu
+\end{gather*}
+
+If coefficient $b=0$ and $c=0$ we see that their is no constraints on $a$.  
+If $a=0$ and $c=0$ we get the following expression
+
+\[
+\frac{2}{d}  b\ein {\sigma}{\sigma} \eta_{\mu \nu}=b_{\mu \nu}+b_{\nu \mu}.
+\]
+If we rewrite $b$ as $b_{\mu \nu}=\omega_{\mu \nu}+k_{\mu \nu}$, where $k_{\mu \nu}=k_{\nu \mu}$  and $\omega_{\mu \nu}=-\omega_{\nu \mu}$. The expression above can be written as
+\[
+\frac{2}{d}  k\ein {\sigma}{\sigma} \eta_{\mu \nu}=2k_{\mu \nu}
+\]
+, which is our constrain on k (the symmetric part of b) and no more constrain on $\omega$ than being antisymmetric.
+
+
+We can rewrite take the derivative of expression \ref{eq:nu mu} and gain the following expression
+\begin{gather}
+\frac{2}{d} \partial_\gamma \partial_\sigma \epsilon^\sigma \eta_{\mu \nu}=\partial_\gamma \partial_\nu \epsilon_\mu+ \partial_\gamma \partial_\mu \epsilon_\nu
+\label{eq:per}
+\end{gather}
+ By permutation we can rewrite \ref{eq:per} as 
+ \begin{gather}
+\frac{2}{d} \partial_\mu \partial_\sigma \epsilon^\sigma \eta_{\nu \gamma}=\partial_\mu \partial_\gamma \epsilon_\nu+ \partial_\mu \partial_\nu \epsilon_\gamma
+\label{eq:per1}
+\end{gather}
+and
+\begin{gather}
+\frac{2}{d} \partial_\nu \partial_\sigma \epsilon^\sigma \eta_{\gamma \mu}=\partial_\nu \partial_\mu \epsilon_\gamma+ \partial_\nu \partial_\gamma \epsilon_\mu
+\label{eq:per2}
+\end{gather}
+ By adding \ref{eq:per} to \ref{eq:per1} and then subtracting \ref{eq:per2} the expression we gain
+ 
+ \begin{gather*}
+\frac{2}{d}\big(\partial_\gamma \partial_\sigma \epsilon^\sigma \eta_{\mu \nu}+\partial_\mu \partial_\sigma \epsilon^\sigma \eta_{\nu \gamma}-\partial_\nu \partial_\sigma \epsilon^\sigma \eta_{\gamma \mu}  \big)= \\
+\cancel{\partial_\gamma \partial_\nu \epsilon_\mu}+ \partial_\gamma \partial_\mu \epsilon_\nu+
+ \partial_\mu \partial_\gamma \epsilon_\nu+ \cancel{\partial_\mu \partial_\nu \epsilon_\gamma}-\cancel{\partial_\nu \partial_\mu \epsilon_\gamma}- \cancel{\partial_\nu \partial_\gamma \epsilon_\mu}=\\2\partial_\gamma \partial_\mu \epsilon_\nu= 2 c_{\nu \gamma \mu}
+ \label{eq:stora}
+\end{gather*}
+ %borde få en 2 till ty c_{\nu \gamma \mu}=c_{\nu \mu \gamma}
+To simplify the expression we do the following definiton
+\[
+\frac{1}{d}\partial_\gamma \partial_\sigma \epsilon^\sigma \stackrel{\mathrm{def}}{=}\ b_\gamma
+\]
+
+which give
+\begin{gather}
+\frac{\cancel{2}}{d}\big(b_\gamma \eta_{\mu \nu}+b_\mu \epsilon^\sigma \eta_{\nu \gamma}-b_\nu\eta_{\gamma \mu}  \big)=\cancel{2} c_{\nu \gamma \mu}
+\Rightarrow\\
+\eta^{\nu \rho}c_{\nu \gamma \mu}x^\gamma x^\mu=c\ein{\rho}{\gamma \mu}x^\gamma x^\mu=\eta^{\nu \rho}\Big(b_\gamma \eta_{\mu \nu}+b_\mu \eta_{\nu \gamma}-b_\nu\eta_{\gamma \mu} \Big)x^\gamma x^\mu=\\ \eta^{\nu \rho}\eta_{\mu \nu} b_\gamma x^\gamma x^\mu+\eta^{\nu \rho}\eta_{\nu \gamma} b_\mu x^\gamma x^\mu-\eta^{\nu \rho}\eta_{\gamma \mu} b_\nu x^\gamma x^\mu=\\
+\delta^\rho _\mu b_\gamma x^\gamma x^\mu+ \delta^\rho _\gamma b_\mu x^\gamma x^\mu - b^\rho x^\mu x_\mu=\\
+b_\gamma x^\gamma x^\rho +b_\mu x^\rho x^\mu- b^\rho x^\mu x_\mu=2 b_\gamma x^\gamma x^\rho- b^\rho x^\mu x_\mu.
+\end{gather}
+
+ By summing up we get the following expression
+ \begin{equation}
+ \epsilon^\mu (x)= a^\mu+ \omega \ein{\mu}{\nu}x^\nu + \alpha x^\mu+ 2b_\nu x^\nu x^\mu -b^\mu x^\nu x_\nu
+ \end{equation}
+ , where $a$ is an arbitrary number, $\alpha^\mu$ is a vector with arbitrary numbers, $\omega\ein{\mu}{\nu}$ is symmetric and $b_\nu=\frac{1}{d}\partial_\nu \partial_\sigma \epsilon^\sigma$
+ 
+We can know find the generators for the conform mapping by Taylor expansion of $\epsilon$ as follow
+
+\begin{gather*}
+f(x)=f(x+\epsilon)=f(x)+\epsilon^\mu \partial_\mu f(x)+ \mathcal{O}(\epsilon^2) \approx \\ (1+\epsilon^\mu \partial_\mu)f(x)=\big[1+(a^\mu+ \omega \ein{\mu}{\nu}x^\nu + \alpha x^\mu +2b_\nu x^\nu x^\mu -b^\mu x^\nu x_\nu)\partial_\mu \big]f(x)
+\end{gather*}
+Since the generators are defined as $e^{i g(x)} $ where g is the generator, we see that the generator causing $a$ is $-i\partial_\nu$
+ 
+ \index{bib}
+ \index{bib!name}

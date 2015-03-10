@@ -1,0 +1,147 @@
+\subsection{Q: Show $\mathfrak{so}(3)\cong \mathfrak{su}(2)$}
+
+The generators $T^i$ for SO(3) can be represented by the matrices
+
+\begin{equation*}
+T^1 \equiv T^{23} = 
+\begin{bmatrix} 0 & 0 & 0 \\
+ 0 & 0 & 1 \\
+  0 & -1 & 0 
+  \end{bmatrix},\;\;\;
+T^2  \equiv T^{31}=
+\begin{bmatrix} 0 & 0 & 1 \\
+ 0 & 0 & 0 \\
+  -1 & 0 & 0 
+  \end{bmatrix},\;\;\;
+T^3 \equiv T^{12}=
+\begin{bmatrix} 0 & 1 & 0 \\
+ -1 & 0 & 0 \\
+  0 & 0 & 0 
+\end{bmatrix}
+\end{equation*}
+or equivalently
+
+$$
+(T^{\alpha \beta})_{cd}= {\delta}^\alpha_c {\delta}^\beta_d-{\delta}^\alpha_d {\delta}^\beta_c=\epsilon_{cd} \epsilon^{\alpha \beta}
+.$$
+
+Now a simple calculation gives us
+
+\begin{gather*}
+\begin{bmatrix}
+T^1 , T^2
+\end{bmatrix} =
+\begin{bmatrix} 0 & 0 & 0 \\
+ 0 & 0 & 1 \\
+  0 & -1 & 0 
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix} 0 & 0 & 1 \\
+ 0 & 0 & 0 \\
+  -1 & 0 & 0 
+  \end{bmatrix}
+  -
+  \begin{bmatrix} 0 & 0 & 1 \\
+ 0 & 0 & 0 \\
+  -1 & 0 & 0 
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix} 0 & 0 & 0 \\
+ 0 & 0 & 1 \\
+  0 & -1 & 0 
+  \end{bmatrix} =\\
+  \begin{bmatrix} 0 & 0 & 0 \\
+ -1 & 0 & 0 \\
+  0 & 0 & 0 
+  \end{bmatrix} -
+  \begin{bmatrix} 0 & -1 & 0 \\
+ 0 & 0 & 0 \\
+  0 & 0 & 0 
+  \end{bmatrix} = 
+  \begin{bmatrix} 0 & 1 & 0 \\
+ -1 & 0 & 0 \\
+  0 & 0 & 0 
+  \end{bmatrix} =T^3
+\end{gather*}
+
+\begin{gather*}
+\begin{bmatrix}
+T^2 , T^3
+\end{bmatrix} =
+\begin{bmatrix} 0 & 0 & 1 \\
+ 0 & 0 & 0 \\
+  -1 & 0 & 0 
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix} 0 & 1 & 0 \\
+ -1 & 0 & 0 \\
+  0 & 0 & 0 
+  \end{bmatrix}
+  -
+  \begin{bmatrix} 0 & 1 & 0 \\
+ -1 & 0 & 0 \\
+  0 & 0 & 0 
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix} 0 & 0 & 1 \\
+ 0 & 0 & 0 \\
+  -1 & 0 & 0 
+  \end{bmatrix} =\\
+  \begin{bmatrix} 0 & 0 & 0 \\
+ 0 & 0 & 0 \\
+  0 & -1 & 0 
+  \end{bmatrix} -
+  \begin{bmatrix} 0 & 0 & 0 \\
+ 0 & 0 & -1 \\
+  0 & 0 & 0 
+  \end{bmatrix} = 
+  \begin{bmatrix} 0 & 0 & 0 \\
+ 0 & 0 & 1 \\
+  0 & -1 & 0 
+  \end{bmatrix} =T^1.
+\end{gather*}
+
+\begin{gather*}
+\begin{bmatrix}
+T^3 , T^1
+\end{bmatrix} =
+\begin{bmatrix} 0 & 1 & 0 \\
+ -1 & 0 & 0 \\
+  0 & 0 & 0 
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix} 0 & 0 & 0 \\
+ 0 & 0 & 1 \\
+  0 & -1 & 0 
+  \end{bmatrix}
+  -
+  \begin{bmatrix} 0 & 0 & 0 \\
+ 0 & 0 & 1 \\
+  0 & -1 & 0 
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix} 0 & 1 & 0 \\
+ -1 & 0 & 0 \\
+  0 & 0 & 0 
+  \end{bmatrix} =\\
+  \begin{bmatrix} 0 & 0 & 1 \\
+ 0 & 0 & 0 \\
+  0 & 0 & 0 
+  \end{bmatrix} -
+  \begin{bmatrix} 0 & 0 & 0 \\
+ 0 & 0 & 0 \\
+  1 & 0 & 0 
+  \end{bmatrix} = 
+  \begin{bmatrix} 0 & 0 & 1 \\
+ 0 & 0 & 0 \\
+  -1 & 0 & 0 
+  \end{bmatrix} =T^1
+\end{gather*}
+
+which can be written as
+
+\begin{equation*}
+[T^i,T^j]=\epsilon_{ijk}T^k.
+\end{equation*}
+
+But this is precisely the Lie algebra for SU(2) which was to be shown.

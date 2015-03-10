@@ -1,0 +1,336 @@
+\section{The commutation relations for the conformal generators \label{sec:comm}}
+In the previous section (\ref{sec:app1}),  we derived the conformal generators
+
+\begin{align}
+    P^\mu&= \p^\mu  \label{eq:comP}
+    \\
+    M^{\mu \nu}&=-\frac{1}{2}(x^\mu\p^\nu-x^\nu\p^\mu) \label{eq:comMM}
+    \\
+    D&=x^\mu \p_\mu \label{eq:comD}
+    \\
+    K^\mu &=2x^\mu x^\gamma \p_\gamma -x^\gamma x_\gamma \p^\mu. \label{eq:comK}
+\end{align}
+
+As many of the calculations are messy we will do some initial calculations that we use to simplify the final calculations. We will investigate $\p^\rho M^{\mu \nu}$ and $\p^\nu K^\rho$ as they are the complicated parts of the commutators. We start with
+
+
+
+    $$
+    \p^\rho M^{\mu \nu} = \p^\rho\big(-\frac{1}{2}(  x^\mu\p^\nu - x^\nu\p^\mu)\big)=
+    $$$$
+    -\frac{1}{2} \big( x^\mu \p ^\rho \p^\nu 
+    -x^\nu \p ^\rho \p^\mu 
+    +\p^\rho x^\mu \p^\nu
+    -\p^\rho x^\nu \p^\mu \big)=
+    $$$$
+    -\frac{1}{2}\big( x^\mu \p ^\rho \p^\nu 
+    -x^\nu \p ^\rho \p^\mu
+    +\eta^{\rho \alpha}\p_\alpha x^\mu \p^\nu
+    -\eta^{\rho \beta}\p_\beta x^\nu \p^\mu\big)=
+    $$$$
+    -\frac{1}{2}\big( x^\mu \p ^\rho \p^\nu 
+    -x^\nu \p ^\rho \p^\mu
+    +\eta^{\rho \alpha} \delta^\mu _\alpha \p^\nu 
+    -\eta^{\rho \beta} \delta^\nu _\beta \p^\mu \big)=
+    $$$$
+    -\frac{1}{2}\big( x^\mu \p ^\rho \p^\nu 
+    -x^\nu \p ^\rho \p^\mu
+    +\eta^{\rho \mu} \p^\nu
+    -\eta^{\rho \nu} \p^\mu \big)
+    $$
+
+
+which means that 
+
+\begin{equation} \label{eq:pM1}
+    \p^\rho M^{\mu \nu}=
+    -\frac{1}{2}\big( x^\mu \p ^\rho \p^\nu 
+    -x^\nu \p ^\rho \p^\mu
+    +\eta^{\rho \mu} \p^\nu
+    -\eta^{\rho \nu} \p^\mu \big).
+\end{equation}
+
+Proceeding we have
+
+    $$
+    \p^\nu K^\rho=\p^\nu\big(2x^\rho x^\gamma \p_\gamma - x^\gamma x_\gamma \p^\rho\big)=
+    $$$$
+    2\big((\p^\nu x^\rho) x^{\gamma} \p_\gamma 
+    +x^\rho (\p^\nu x_\gamma)\p^\gamma
+    +x^\rho x_\gamma \p^\nu\p^\gamma\big)
+    -2x^\nu\p^\rho
+    -x^\gamma x_\gamma \p^\nu \p^\rho=
+    $$$$
+    2\eta^{\nu \rho}x^\gamma \p_\gamma
+    + 2(x^\rho \p^\nu-x^\nu\p^\rho)
+    + 2x^\rho x_\gamma \p^\nu \p^\gamma
+    - x^\gamma x_\gamma \p^\nu \p^\rho.
+    $$
+
+which means that 
+
+\begin{equation} \label{eq:pM2}
+    \p^\nu K^\rho=
+    2\eta^{\nu \rho}x^\gamma \p_\gamma
+    + 2(x^\rho \p^\nu-x^\nu\p^\rho)
+    + 2x^\rho x_\gamma \p^\nu \p^\gamma
+    - x^\gamma x_\gamma \p^\nu \p^\rho.
+\end{equation}
+
+We now want to calculate the commutators of these generators which gives us the Lie algebra of the conformal group. First we note that $\comb{P^\mu}{P^\nu}=0$ as partial derivatives commute and $\comb{D}{D}=0$ because the commutator is antisymmetric and there is only one generator $D$. After these trivial commutation relations we proceed with $\comb{M^{\mu \nu}}{P^\rho}$ which we can write as
+
+    $$\comb{M^{\mu \nu}}{P^\rho}=
+    M^{\mu \nu}\p^\rho
+    -\p^\rho M^{\mu \nu}
+    $$
+
+and by using \ref{eq:pM1} we get
+
+    $$
+    \comb{M^{\mu \nu}}{P^\rho}=
+    -\frac{1}{2}\big(
+        \bcancel{x^\mu\p^\nu\p^\rho}
+        -\cancel{x^\nu\p^\mu\p^\rho}\big)
+    +\frac{1}{2}\big( \bcancel{x^\mu \p ^\rho \p^\nu} 
+        -\cancel{x^\nu \p ^\rho \p^\mu}
+        +\eta^{\rho \mu} \p^\nu
+        -\eta^{\rho \nu} \p^\mu \big)
+    $$
+    
+which gives us
+
+\begin{equation}
+\comb{M^{\mu \nu}}{P^\rho}= 
+    \frac{1}{2}(
+        \eta^{\rho \mu} P^\nu
+        -\eta^{\rho \nu} P^\mu).
+\end{equation}
+
+If we perform the same calculation for $\comb{M^{\mu \nu}}{K^\rho}$ we find that
+
+    $$\comb{M^{\mu \nu}}{K^\rho}=
+    -\frac{1}{2}(x^\mu\p^\nu K^\rho
+        -x^\nu\p^\mu K^\rho)
+    -(2x^\rho x_\gamma \p^\gamma M^{\mu \nu}-
+        x^\gamma x_\gamma \p^\rho M^{\mu \nu})=$$
+\begin{align*}
+    -\frac{1}{2}\big(
+    2x^\mu \eta^{\nu \rho}x^\gamma \p_\gamma&
+        + 2 x^\mu (
+            x^\rho \p^\nu
+            -x^\nu\p^\rho)
+        + 2x^\mu x^\rho x_\gamma \p^\nu \p^\gamma
+        - x^\mu x^\gamma x_\gamma \p^\nu \p^\rho
+        \\
+        -2x^\nu \eta^{\mu \rho}x^\gamma \p_\gamma&
+        - 2 x^\nu (
+            x^\rho \p^\mu
+            -x^\mu\p^\rho)
+        - 2x^\nu x^\rho x_\gamma \p^\mu \p^\gamma
+        + x^\nu x^\gamma x_\gamma \p^\mu \p^\rho\big)
+        \\
+    -\big(
+        2x^\rho x_\gamma
+        \big(-\frac{1}{2}\big)& \big(
+            x^\mu \p ^\gamma \p^\nu 
+            -x^\nu \p ^\gamma \p^\mu
+    +\eta^{\gamma \mu} \p^\nu
+    -\eta^{\gamma \nu} \p^\mu \big)
+    \\
+    -x^\gamma x_\gamma 
+    \big(-\frac{1}{2}\big)&\big(
+        x^\mu \p ^\rho \p^\nu 
+        -x^\nu \p ^\rho \p^\mu
+        +\eta^{\rho \mu} \p^\nu
+        -\eta^{\rho \nu} \p^\mu \big)\big).
+\end{align*}
+
+Simplyfying by removing parentheses and cancelling terms, we have
+
+\begin{gather*}
+    -x^\mu \eta^{\nu \rho}x^\gamma \p_\gamma
+    -\bcancel{x^\mu (
+        x^\rho \p^\nu
+        -x^\nu\p^\rho)}
+    -\cancel{x^\mu x^\rho x_\gamma \p^\nu \p^\gamma}
+    +\cancel{\frac{1}{2} x^\mu x^\gamma x_\gamma \p^\nu \p^\rho}
+    \\
+    +x^\nu \eta^{\mu \rho}x^\gamma \p_\gamma
+    +\bcancel{ x^\nu (
+        x^\rho \p^\mu
+        -x^\mu\p^\rho)}
+    +\cancel{x^\nu x^\rho x_\gamma \p^\mu \p^\gamma}
+    -\cancel{\frac{1}{2} x^\nu x^\gamma x_\gamma \p^\mu \p^\rho}
+        \\
+    +\cancel{ x^\rho x_\gamma x^\mu \p ^\gamma \p^\nu }
+    -\cancel{ x^\rho x_\gamma x^\nu \p ^\gamma \p^\mu }
+    +\bcancel{ x^\rho x_\gamma \eta^{\gamma \mu} \p^\nu}
+    -\bcancel{ x^\rho x_\gamma \eta^{\gamma \nu} \p^\mu}
+    \\
+    \cancel{-\frac{1}{2}x^\gamma x_\gamma x^\mu \p ^\rho \p^\nu }
+    \cancel{+\frac{1}{2}x^\gamma x_\gamma x^\nu \p ^\rho \p^\mu }
+    -\frac{1}{2}x^\gamma x_\gamma \eta^{\rho \mu} \p^\nu
+    +\frac{1}{2}x^\gamma x_\gamma \eta^{\rho \nu} \p^\mu
+\end{gather*}
+
+where we used the metric to raise indices. Thus we find that
+
+$$
+\comb{M^{\mu \nu}}{K^\rho}=
+    -x^\mu \eta^{\nu \rho}x^\gamma \p_\gamma
+    +x^\nu \eta^{\mu \rho}x^\gamma \p_\gamma
+    -\frac{1}{2}x^\gamma x_\gamma \eta^{\rho \mu} \p^\nu
+    +\frac{1}{2}x^\gamma x_\gamma \eta^{\rho \nu} \p^\mu=
+$$$$
+- \frac{1}{2} \eta^{\nu \rho}(2x^\mu x^\gamma \p_\gamma - x^\gamma x_\gamma \p^\mu)+\frac{1}{2}\eta^{\mu \rho}(2x^\nu x^\gamma \p_\gamma - x^\gamma x_\gamma \p^\nu)=
+$$$$
+\frac{1}{2}( \eta^{\mu \rho}K^\nu-\eta^{\nu\rho} K^\mu )
+$$
+
+% Jag fortsätter med kommuteringen här under för M,D & [M,M] //Johan
+
+Proceeding with $\big[M^{\mu \nu}, D \big]$ we have
+
+    $$
+    \comb{M^{\mu \nu}}{D}=-\frac{1}{2}\big(
+    (x^\nu \p^\mu-x^\mu \p^\nu)x^\sigma \p_\sigma-
+    x^\sigma \p_\sigma(x^\nu \p^\mu-x^\mu \p^\nu))\big)
+    $$$$
+    - \frac{1}{2}\big( (x^\nu \eta^{\mu \alpha} \p_\alpha-x^\mu \eta^{\nu \beta} \p_\beta)x^\sigma \p_\sigma-x^\sigma \de^\nu _\sigma \p^\mu - x^\sigma \de^\mu_{\sigma} \p^\nu \big)=
+    $$$$
+    -\frac{1}{2}\big( (x^\nu \eta^{\mu \alpha} \de^\sigma_\alpha \p_\sigma-
+    x^\mu \eta^{\nu \beta} \de^\sigma_\beta \de_\sigma)- x^\nu\p^\mu-x^\mu \p^\nu \big)=
+    $$$$
+    -\frac{1}{2} \big( x^\nu \eta^{\mu \sigma}\p_\sigma- x^\mu \eta^{\nu \sigma}\p_\sigma-x^\nu\p^\mu-x^\mu \p^\nu\big)=
+-\frac{1}{2}\big( x^\nu\p^\mu-x^\mu \p^\nu -x^\nu\p^\mu-x^\mu \p^\nu \big)
+    $$$$
+    =0.
+    $$
+    
+    
+Next we calculate $\comb{M^{\mu \nu}}{M^{\rho \gamma}}$ using equation \eqref{eq:pM1}.
+
+$$
+\comb{M^{\mu \nu}}{M^{\gamma \rho}}=-\frac{1}{2}
+\big( (x^\mu\p^\nu-x^\nu\p^\mu)M^{\gamma\rho}
+-(x^\gamma \p^\rho-x^\rho \p^\gamma)M^{\mu\nu}\big)=
+$$
+$$
+\frac{1}{4}x^\mu\big( x^\gamma \p ^\nu \p^\rho 
+    -x^\rho \p ^\nu \p^\gamma
+    +\eta^{\nu \gamma} \p^\rho
+    -\eta^{\nu \rho} \p^\gamma \big)
+-
+\frac{1}{4}x^\nu\big( x^\gamma \p ^\mu \p^\rho 
+    -x^\rho \p ^\mu \p^\gamma
+    +\eta^{\mu \gamma} \p^\rho
+    -\eta^{\mu \rho} \p^\gamma \big)
+$$
+$$
+-\frac{1}{4}x^\gamma\big( x^\mu \p ^\rho \p^\nu 
+    -x^\nu \p ^\rho \p^\mu
+    +\eta^{\rho \mu} \p^\nu
+    -\eta^{\rho \nu} \p^\mu \big)
++
+\frac{1}{4}x^\rho\big( x^\mu \p ^\gamma \p^\nu 
+    -x^\nu \p ^\gamma \p^\mu
+    +\eta^{\gamma \mu} \p^\nu
+    -\eta^{\gamma \nu} \p^\mu \big)=
+$$
+$$
+\frac{1}{4}\big(
+\eta^{\mu \rho}(x^\nu\p^\gamma-x^\gamma \p^\nu)
++\eta^{\nu \gamma}(x^\mu\p^\rho-x^\rho \p^\mu)
+-\eta^{\mu \gamma}(x^\nu\p^\rho-x^\rho\p^\nu)
+-\eta^{\nu \rho}(x^\mu \p^\gamma-x^\gamma\p^\mu)
+\big)
+$$
+
+as all second derivatives cancel since they commute. Using the definition of $M^{\mu \nu}$ given in equation \ref{eq:comMM} we therefore have
+
+$$
+\comb{M^{\mu \nu}}{M^{\gamma \rho}}=
+\frac{1}{2}\big(
+\eta^{\mu \rho}M^{\gamma \nu}
++\eta^{\nu \gamma}M^{\rho \mu}
+-\eta^{\mu \gamma}M^{\rho \nu}
+-\eta^{\nu \rho}M^{\gamma \mu}
+\big)
+$$
+
+Continuing with $\comb{P^{\mu}}{K^{\nu}}$ we use equation \eqref{eq:pM2}, 
+
+$$\comb{P^{\mu}}{K^{\nu}} = \p^{\mu}K^\nu
+-(2x^{\nu}x^{\gamma}\p_{\gamma}-x^{\gamma}x_{\gamma}\p^{\nu})\p^{\mu}=$$
+$$2\eta^{\mu \nu}x^\gamma \p_\gamma
+    + 2(x^\nu \p^\mu-x^\mu\p^\nu)
+    + \cancel{2x^\nu x_\gamma \p^\mu \p^\gamma
+    - x^\gamma x_\gamma \p^\mu \p^\nu}
+    -\cancel{(2x^{\nu}x^{\gamma}\p_{\gamma}-
+    x^{\gamma}x_{\gamma}\p^{\nu})\p^{\mu}}=
+$$
+
+and using the definition of our generators we find that
+$$\comb{P^{\mu}}{K^{\nu}}=2\eta^{\nu\mu}D+4M^{\mu\nu}.$$
+
+When we now calculate $\comb{D}{K^{\mu}}$ we find that we can reuse much of our previous calculation:
+
+$$\comb{D}{K^{\mu}}=x_{\sigma}\p{^\sigma}K^\mu
+-(2x^{\mu}x^{\gamma}\p_{\gamma}-x^{\gamma}x_{\gamma}\p^{\mu})x_{\sigma}\p^{\sigma}=$$
+$$
+x_\sigma\big(\p{^\sigma}K^\mu
+-(2x^{\mu}x^{\gamma}\p_{\gamma}-x^{\gamma}x_{\gamma}\p^{\mu})\p^{\sigma}\big)
+-\eta_{\rho\sigma}(2x^\mu x^\gamma\p_\gamma
+-\eta^{\mu\nu}x^\gamma x_\gamma\p_\nu)x^\rho\p^\sigma=
+$$
+$$
+x_\sigma\big(\p{^\sigma}K^\mu
+-(2x^{\mu}x^{\gamma}\p_{\gamma}-x^{\gamma}x_{\gamma}\p^{\mu})\p^{\sigma}\big)
+-\eta_{\rho\sigma}(2x^\mu x^\gamma\delta_\gamma^\rho
+-\eta^{\mu\nu}x^\gamma x_\gamma\delta_\nu^\rho)\p^\sigma=
+$$
+$$
+2x_\sigma\big(\eta^{\sigma \mu}x^\gamma \p_\gamma
+    + (x^\mu \p^\sigma-x^\sigma\p^\mu)\big)
+    -2x^\mu x^\gamma\p_\gamma
+    +x^\gamma x_\gamma\p^\mu=
+$$
+$$
+2x^\mu x^\sigma\p_\sigma-x^\sigma_\sigma\p^\mu=K^\mu.
+$$
+
+We finally calculate $\comb{D}{P^{\mu}}$ with the result 
+
+$$
+\comb{D}{P^{\mu}}=
+x^\sigma \p_\sigma \p^\mu
+-\p^\mu x^\sigma \p_\sigma=
+x^\sigma \p_\sigma \p^\mu-
+    \big(
+        \p^\mu (x^\sigma) \p_\sigma
+        +x^\sigma \p_\sigma\p^\mu
+    \big)=-\eta^{\mu\rho}\p_\rho(x^\sigma)\p_\sigma=
+$$
+$$
+-\p^\mu=-P.
+$$
+
+Summarizing we've found the commutation relations
+
+\begin{align}
+    \comb{M^{\mu \nu}}{P^\rho}&=\frac{1}{2} \big( \eta^{\rho \mu}P^\nu-\eta^{\nu \rho}P^\mu \big) \label{eq:MP} 
+    \\
+    \comb{M^{\mu \nu}}{M^{\rho \gamma}}&=\frac{1}{2}\big(
+    \eta^{\mu \rho} M^{\gamma \nu}+\eta^{\nu \gamma} M^{\rho \mu}
+    -\eta^{\mu \gamma} M^{\rho \nu}-\eta^{\nu \rho} M^{\gamma \mu}\big) \label{eq:MM}
+    \\
+    \comb{M^{\mu \nu}}{K^\rho}&= \frac{1}{2}\big( \eta^{\rho \mu}K^\nu-\eta^{\nu \rho}K^\mu \big) \label{eq:MK}
+    \\
+    \comb{P^{\mu}}{K^\nu}&=2 \big( \eta^{\mu \nu}D+ 2M^{\mu \nu} \label{eq:PK} \big)
+    \\
+    \comb{D}{P^\mu}&=-P^\mu
+    \\
+    \comb{D}{K^\mu}&=K^\mu.
+\end{align}
+
+while other commutators are zero.

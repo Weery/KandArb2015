@@ -1,0 +1,125 @@
+\newcommand{\ein}[2]{
+^{#1\hphantom{#2}}_{\hphantom{#1}#2}
+}
+
+\newcommand{\einthree}[3]{
+^{#1\hphantom{#2}#3}_{\hphantom{#1}#2\hphantom{#3}}
+}
+
+\newcommand{\einfour}[4]{
+^{#1\hphantom{#2}#3\hphantom{#4}}_{\hphantom{#1}#2\hphantom{#3}#4}
+}
+
+\newcommand{\einfive}[5]{
+^{#1\hphantom{#2}#3\hphantom{#4}#5}_{\hphantom{#1}#2\hphantom{#3}#4\hphantom{#5}}
+}
+
+\newcommand{\einsix}[6]{
+^{#1\hphantom{#2}#3\hphantom{#4}#5\hphantom{#6}}_{\hphantom{#1}#2\hphantom{#3}#4\hphantom{#5}#6}
+}
+
+\newcommand{\einseven}[7]{
+^{#1\hphantom{#2}#3\hphantom{#4}#5\hphantom{#6}#7}_{\hphantom{#1}#2\hphantom{#3}#4\hphantom{#5}#6\hphantom{#7}}
+}
+
+\newcommand{\eineight}[8]{
+^{#1\hphantom{#2}#3\hphantom{#4}#5\hphantom{#6}#7\hphantom{#8}}_{\hphantom{#1}#2\hphantom{#3}#4\hphantom{#5}#6\hphantom{#7}#8}
+}
+
+\newcommand{\einnine}[9]{
+^{#1\hphantom{#2}#3\hphantom{#4}#5\hphantom{#6}#7\hphantom{#8}#9}_{\hphantom{#1}#2\hphantom{#3}#4\hphantom{#5}#6\hphantom{#7}#8\hphantom{#9}}
+}
+
+
+\newcommand{\eii}[2]{
+_{#1\hphantom{#2}}^{\hphantom{#1}#2}
+}
+
+\newcommand{\eiithree}[3]{
+_{#1\hphantom{#2}#3}^{\hphantom{#1}#2\hphantom{#3}}
+}
+
+\newcommand{\eiifour}[4]{
+_{#1\hphantom{#2}#3\hphantom{#4}}^{\hphantom{#1}#2\hphantom{#3}#4}
+}
+
+\newcommand{\eiifive}[5]{
+_{#1\hphantom{#2}#3\hphantom{#4}#5}^{\hphantom{#1}#2\hphantom{#3}#4\hphantom{#5}}
+}
+
+\newcommand{\eiisix}[6]{
+_{#1\hphantom{#2}#3\hphantom{#4}#5\hphantom{#6}}^{\hphantom{#1}#2\hphantom{#3}#4\hphantom{#5}#6}
+}
+
+\newcommand{\eiiseven}[7]{
+_{#1\hphantom{#2}#3\hphantom{#4}#5\hphantom{#6}#7}^{\hphantom{#1}#2\hphantom{#3}#4\hphantom{#5}#6\hphantom{#7}}
+}
+
+\newcommand{\eiieight}[8]{
+_{#1\hphantom{#2}#3\hphantom{#4}#5\hphantom{#6}#7\hphantom{#8}}^{\hphantom{#1}#2\hphantom{#3}#4\hphantom{#5}#6\hphantom{#7}#8}
+}
+
+\newcommand{\eiinine}[9]{
+_{#1\hphantom{#2}#3\hphantom{#4}#5\hphantom{#6}#7\hphantom{#8}#9}^{\hphantom{#1}#2\hphantom{#3}#4\hphantom{#5}#6\hphantom{#7}#8\hphantom{#9}}
+}
+
+%Hur man använder \ein*** och \eii*** macrona:
+% SE TILL ATT ANVÄNDA DOM I MATTE MOD. JAG VET INTE OM DOM FUNGERAR UTANFÖR
+%
+% Dom hanterar Einstein notation som respekterar ordning och spacing av indexen
+%
+% Dom grundläggande macrona är
+%  \ein och \eii
+% skillnaden mellan dom är om första idexet är uppe eller nere (ein:uppe, eii:nere)
+%
+% För att skriva något med einstein index så skriver man
+%   A\ein{a}{b} där a är indexet upp och b är indexet nere
+% Det går även skriva 
+%   A\ein{abc}{de}
+%
+% \ein behandlar ett "byte" av index upp och ett intex nere
+%
+% Om man vill ha flera byten så kan man användan
+%  \einthree, \einfour etc...
+% där talet motsvarar mängden byten av index uppe och nere
+% 
+% Jag hoppas att det förklarar hur det fungerar. Pröva dom och om ni inte får dom fungerande så säg till så förklarar jag.
+%
+% Bugs/Issues:
+%  Fungerar ej i matte läge för titlar... Ger kompilerings fel...
+%
+
+
+\newcommand{\pder}[2]{
+\frac{\partial #1}{\partial #2}
+}
+
+% Litet kort macro för att skriva en patiel derivata i matte läge
+% 
+
+\newcommand{\ppder}[3]{
+\frac{\partial^2 #1}{\partial #2 \partial #3}
+}
+
+% Litet kort macro för att skriva en dubbel partiel derivata i matte läge
+%
+
+\newcommand{\com}[2]{
+[#1,#2]
+}
+
+\newcommand{\comb}[2]{
+\big[#1, #2\big]}
+
+\newcommand{\comf}[2]{#1#2-#2#1}
+\newcommand{\acom}[2]{\{#1,#2\}}
+\newcommand{\acomf}[2]{#1#2+#2#1}
+\newcommand{\pb}[2]{\{#1,#2\}_{PB}}
+\newcommand{\pbf}[3]{
+\frac{\partial #1}{\partial q^{#3}}\frac{\partial #2}{\partial \pi_{#3}}-\frac{\partial #1}{\partial q^{#3}}\frac{\partial #2}{\partial \pi_{#3}}
+}
+
+\newcommand{\p}{\partial}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\de}{\delta}
+\newcommand{\De}{\Delta}
